@@ -25,8 +25,107 @@
 <body>
 
     <center>
-        <div id="title"> Create New Review </id>
+    <div id="title"> Create New Artist Review </div>
+    <br><br><br>
     </center>
+
+    <div class="container" align="center">
+        <form class="form-horizontal">
+            <fieldset>
+            <!-- Text input-->
+            <div class="form-group">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+              <input id="textinput" name="textinput" type="text" placeholder="Who did you see?" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+              <input id="textinput" name="textinput" type="text" placeholder="Where did you see them?" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- Multiple Radios (inline) -->
+            <div class="form-group">
+              <div class="col-md-4"></div>
+              <div class="col-md-4"> 
+                <label class="radio-inline" for="radios-0">
+                  <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                  ★
+                </label> 
+                <label class="radio-inline" for="radios-1">
+                  <input type="radio" name="radios" id="radios-1" value="2">
+                  ★★
+                </label> 
+                <label class="radio-inline" for="radios-2">
+                  <input type="radio" name="radios" id="radios-2" value="3">
+                  ★★★
+                </label> 
+                <br>
+                <label class="radio-inline" for="radios-3">
+                  <input type="radio" name="radios" id="radios-3" value="4">
+                  ★★★★
+                </label> 
+                <label class="radio-inline" for="radios-4">
+                  <input type="radio" name="radios" id="radios-4" value="5">
+                  ★★★★★
+                </label>
+              </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <select id="selectbasic" name="selectbasic" class="form-control">
+                  <option value="I felt..." selected disabled>I felt...</option>
+                  <option value="Nothing">Nothing</option>
+                  <option value="Joy">Joy</option>
+                  <option value="Surprise">Surprise</option>
+                  <option value="Sadness">Sadness</option>
+                  <option value="Anger">Anger</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+              <input id="textinput" name="textinput" type="text" placeholder="Describe your experience in one sentence!" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">                     
+                <textarea class="form-control" id="textarea" name="textarea" placeholder="Your chance to elaborate..."></textarea>
+              </div>
+            </div>
+
+            <!-- File Button --> 
+            <div class="form-group">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <input id="filebutton" name="filebutton" class="input-file" type="file">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" class="btn btn-success btn-block">Submit</button>
+              </div>
+            </div>
+            </fieldset>
+        </form>
+    </div>
 
     <div class="btn-group btn-group-justified fix-down">
         <div class="btn-group">
@@ -45,7 +144,6 @@
             </a>
         </div>
     </div>
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
