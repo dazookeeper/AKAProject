@@ -14,6 +14,11 @@
     <link href="../css/overrideNavbar.css" rel="stylesheet">
     <link href="../css/stylesheet.css" rel="stylesheet">
 
+
+
+    <!--coverflow-->
+    <link rel="stylesheet" href="../css/style.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,9 +27,59 @@
     <![endif]-->
 </head>
 <body>
-<div class="container">
-  <h1 align="center" id="artistname">{{name}}</h1>
-</div>
+    <div class="container">
+        <h1 align="center" id="artistname">{{name}}</h1>
+    </div>
+
+
+
+
+    <div id="coverflow">
+        <div class="covers">
+            <ul>
+                <li><div class="imgdiv">
+                    <a href="../images/tf1.jpg" data-gallery="gallery" data-cap="lightbox caption 03">
+                        <img src="../images/tf1.jpg" alt="">
+                    </a>
+                </div>
+                </li>
+                <li><div class="imgdiv">
+                    <a href="../images/tf2.jpg" data-gallery="gallery" data-cap="lightbox caption 03">
+                        <img src="../images/tf2.jpg" alt="">
+                    </a>
+                </div>
+                </li>
+                <li><div class="imgdiv">
+                    <a href="../images/tf3.jpg" data-gallery="gallery" data-cap="lightbox caption 03">
+                        <img src="../images/tf3.jpg" alt="">
+                    </a>
+                </div>
+                </li>
+                <li><div class="imgdiv">
+                    <a href="../images/tf4.jpg" data-gallery="gallery" data-cap="lightbox caption 03">
+                        <img src="../images/tf4.jpg" alt="">
+                    </a>
+                </div>
+                </li>
+                <li><div class="imgdiv">
+                    <a href="../images/tf5.jpg" data-gallery="gallery" data-cap="lightbox caption 03">
+                        <img src="../images/tf5.jpg" alt="">
+                    </a>
+                </div>
+                </li>
+                <li><div class="imgdiv">
+                    <a href="../images/tf6.jpg" data-gallery="gallery" data-cap="lightbox caption 03">
+                        <img src="../images/tf6.jpg" alt="">
+                    </a>
+                </div>
+                </li>
+            </ul>
+        </div>
+        <!--<div class="Controller"></div>
+        <div class="ScrollBar"></div>-->
+    </div>
+
+
 
 
 
@@ -46,6 +101,16 @@
       </div>
   </div>
 
+
+
+
+
+
+<!--coverflow thingie-->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="../js/coverflow.min.js"></script>
+<script> $coverflow = $("#coverflow").coverflow({"path":"../"}); </script>
 
 
 
