@@ -5,14 +5,22 @@
 
 exports.view = function(req, res){
   res.render('index', {
-    'projects': [
-      { 'name': 'Waiting in Line',
+    'artists': [
+      { 'name': 'Taylor Swift',
         'image': 'lorempixel.people.1.jpeg',
-        'id': 'project1'
+        'id': 'taylorswift'
       },
-      { 'name': 'Needfinding',
-        'image': 'lorempixel.city.1.jpeg',
-        'id': 'project2'
+      { 'name': 'Kanye West',
+        'image': 'lorempixel.people.1.jpeg',
+        'id': 'kanyewest'
+      },
+      { 'name': 'Porter Robinson',
+        'image': 'lorempixel.people.1.jpeg',
+        'id': 'porterrobinson'
+      },
+      { 'name': 'RL Grime',
+        'image': 'lorempixel.people.1.jpeg',
+        'id': 'rlgrime'
       }
     ]
   });

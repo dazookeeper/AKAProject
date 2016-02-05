@@ -42,17 +42,19 @@
     <div class="panel-body" style="min-height: 10em">Panel Footer</div>
 </div>-->
 <div class="container">
-	
-	<div class="row module1" style="min-height:25%; top: 1em" >
+	{{#each artists}}
+	<div class="row module1" style="min-height:25%; top: 1em; 
+	background: url(http://img12.deviantart.net/8998/i/2010/205/e/e/black_v2_wip_by_ethenyl.jpg);">
 	    <header>
-	        <a href="/taylorswift">
+	        <a href="/artists/{{id}}">
 		        <h1 style="color: deepskyblue">
-		            Taylor Swift
+		            {{name}}
 		        </h1>
 	    	</a>
 	    </header>
 	</div>
-	<div class="row module1" style="min-height:25%; top: 1em">
+	{{/each}}
+	<!-- <div class="row module1" style="min-height:25%; top: 1em">
 	    <header>
 	        <h1 style="color: deepskyblue">
 	            Kanye West
@@ -72,7 +74,7 @@
 	            Fawks
 	        </h1>
 	    </header>
-	</div>
+	</div> -->
 </div>
 
 <div class="btn-group btn-group-justified fix-down">
