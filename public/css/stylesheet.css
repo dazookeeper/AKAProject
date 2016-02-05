@@ -1,7 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+
 #logo {
-	font-family: Arial;
+	font-family: 'Arvo', serif;
 	font-size: 55px;
 	font-weight: bold;
+}
+#title {
+	font-family: 'Arvo', serif;
+	font-size: 30px;
 }
 #searchbar {
 	padding: 20px;
