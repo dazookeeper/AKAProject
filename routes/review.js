@@ -3,5 +3,5 @@
  */
 
 exports.view = function(req, res){
-  res.render('features');
+  res.render('review');
 };

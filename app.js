@@ -13,11 +13,13 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var about = require('./routes/about');
-var albums = require('./routes/albums');
+var artists = require('./routes/artists');
+var review = require('./routes/review');
 var contact = require('./routes/contact');
-var features = require('./routes/features');
+var profile = require('./routes/profile');
 var index = require('./routes/index');
 var shortcodes = require('./routes/shortcodes');
+var TS = require('./routes/artists');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -44,11 +46,14 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/about', about.view);
-app.get('/albums', albums.view);
+app.get('/artists', artists.view);
+app.get('/review', review.view);
 app.get('/contact', contact.view);
-app.get('/features', features.view);
+app.get('/profile', profile.view);
 app.get('/index', index.view);
 app.get('/shortcodes', shortcodes.view);
+app.get('/artists/:name', artists.viewArtists);
+app.get('/taylor-swift', TS.viewTS);
 
 // delete this line if NOT using socket.io
 var io = require('socket.io').listen(server);   
