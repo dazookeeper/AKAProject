@@ -19,7 +19,7 @@ var contact = require('./routes/contact');
 var profile = require('./routes/profile');
 var index = require('./routes/index');
 var shortcodes = require('./routes/shortcodes');
-var TS = require('./routes/artists');
+var artist = require('./routes/artist');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -52,8 +52,7 @@ app.get('/contact', contact.view);
 app.get('/profile', profile.view);
 app.get('/index', index.view);
 app.get('/shortcodes', shortcodes.view);
-app.get('/artists/:name', artists.viewArtists);
-app.get('/taylor-swift', TS.viewTS);
+app.get('/artist/:name', artist.viewArtist);
 
 // delete this line if NOT using socket.io
 var io = require('socket.io').listen(server);   

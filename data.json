@@ -1,5 +1,5 @@
 {
-  "artists": [
+  "artist": [
     { "name": "Taylor Swift",
       "image": "lorempixel.people.1.jpeg",
       "id": "taylorswift"
