@@ -10,70 +10,80 @@
           "author": "Bernie",
           "date": "Jan 20th 2016",
           "rating": "5",
-          "body": "I think she's fabulous on stage! OMG TAYTAY"
+          "body": "I think she's fabulous on stage! OMG TAYTAY",
+          "mood": "happy"
         },
         {
           "reviewId": "0001",
           "author": "Donald",
           "date": "Jan 1st 2016",
           "rating": "1",
-          "body": "What a yuuuuge performace but it lackins American spirit. I will make America great again!!!!"
+          "body": "What a yuuuuge performace but it lackins American spirit. I will make America great again!!!!",
+          "mood": "happy"
         },
         {
           "reviewId": "0002",
           "author": "Hilary",
           "date": "Jan 22th 2016",
           "rating": "3",
-          "body": "GOOD, SOLID, Jennifer Lawerence...I mean Taylor Swift is the best"
+          "body": "GOOD, SOLID, Jennifer Lawerence...I mean Taylor Swift is the best",
+          "mood": "happy"
         },
         {
           "reviewId": "0003",
           "author": "Ted",
           "date": "Jan 20th 2016",
           "rating": "3",
-          "body": "Taylor Swift performed on stage at Antarctica yesterday it was great"
+          "body": "Taylor Swift performed on stage at Antarctica yesterday it was great",
+          "mood": "happy"
         },
         {
           "reviewId": "0004",
           "author": "Jeb",
           "date": "Mar 7th 2015",
           "rating": "2",
-          "body": "My brother watched TayTay's peformance, he said it was terrible"
+          "body": "My brother watched TayTay's peformance, he said it was terrible",
+          "mood": "happy"
         },
         {
           "reviewId": "0005",
           "author": "John",
           "date": "Aug 28th 2015",
           "rating": "4",
-          "body": "Many people may not agree with me, but I think she's pretty good"
+          "body": "Many people may not agree with me, but I think she's pretty good",
+          "mood": "happy"
         },
         {
           "reviewId": "0006",
           "author": "Marco",
           "date": "Jan 4th 2016",
           "rating": "5",
-          "body": "Let's dispel the fact that Taylor Swift doesn't know what she's doing. She knows exactly what she's doing"
+          "body": "Let's dispel the fact that Taylor Swift doesn't know what she's doing. She knows exactly what she's doing",
+          "mood": "happy"
         },
         {
           "reviewId": "0007",
           "author": "Jim",
           "date": "Feb 2nd 2016",
           "rating": "2",
-          "body": "I'm neutral!!!!"
+          "body": "I'm neutral!!!!",
+          "mood": "happy"
         },
         {
           "reviewId": "0009",
           "author": "Ben",
           "date": "Jun 19th 2015",
           "rating": "1",
-          "body": "Clothes too revealing!!"
+          "body": "Clothes too revealing!!",
+          "mood": "happy"
         },
         {
           "reviewId": "0010",
           "author": "Chris",
           "date": "July 25th 2015",
           "rating": "4",
-          "body": "I don't like Marco! But I love TayTay!!"
+          "body": "I don't like Marco! But I love TayTay!!",
+          "mood": "happy"
         }
       ]
     },

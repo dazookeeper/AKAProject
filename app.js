@@ -25,6 +25,8 @@ var index = require('./routes/index');
 var shortcodes = require('./routes/shortcodes');
 var artist = require('./routes/artist');
 
+var reviewLoad= require ('./routes/reviewLoad');
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -60,6 +62,7 @@ app.get('/shortcodes', shortcodes.view);
 app.get('/artist/:name', artist.viewArtist);
 app.get('/registration', registration.view);
 app.get('/accountrecovery', accountrecovery.view);
+app.get('/reviewLoad', reviewLoad.loadReview);
 
 // delete this line if NOT using socket.io
 var io = require('socket.io').listen(server);   
