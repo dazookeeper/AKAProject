@@ -12,6 +12,10 @@ var server = http.createServer (app);
 var path = require('path');
 var handlebars = require('express3-handlebars');
 
+var registration = require('./routes/registration');
+var accountrecovery = require('./routes/accountrecovery');
+
+
 var about = require('./routes/about');
 var artists = require('./routes/artists');
 var review = require('./routes/review');
@@ -20,6 +24,7 @@ var profile = require('./routes/profile');
 var index = require('./routes/index');
 var shortcodes = require('./routes/shortcodes');
 var artist = require('./routes/artist');
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -53,6 +58,8 @@ app.get('/profile', profile.view);
 app.get('/index', index.view);
 app.get('/shortcodes', shortcodes.view);
 app.get('/artist/:name', artist.viewArtist);
+app.get('/registration', registration.view);
+app.get('/accountrecovery', accountrecovery.view);
 
 // delete this line if NOT using socket.io
 var io = require('socket.io').listen(server);   

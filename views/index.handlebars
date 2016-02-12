@@ -16,8 +16,21 @@
 <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 
+<!--login form links -->
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="/css/login.css">
+
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<script src="js/login.js"></script>
+<!-- javascript for login -->
+
+
+
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<!-- start-smoth-scrolling -->
@@ -38,7 +51,7 @@
 <!-- banner -->
 <div class="banner">
 	<div class="col-md-10 banner-right">
-		<div class="navigation">
+		<!-- <div class="navigation">
 			<div class="nav-left">
 				<span class="menu"><img src="img/menu.png" alt=""/></span>
 						<ul class="nav1">
@@ -48,29 +61,31 @@
 							<li class="hvr-underline-from-left button2"><a href="/profile">Profile</a></li>
 							<li class="hvr-underline-from-left button2"><a href="/shortcodes">Short Codes</a></li>
 							<li class="hvr-underline-from-left button2"><a href="/contact">Contact</a></li>
-						</ul>
+						</ul> -->
 						<!-- script for menu -->
-							<script> 
+							<!--<script> 
 								$( "span.menu" ).click(function() {
 								$( "ul.nav1" ).slideToggle( 300, function() {
 								 // Animation complete.
 								});
 								});
-							</script>
+							</script> -->
 						<!-- //script for menu -->
-			</div>
+			<!-- </div>
 			<div class="nav-right">
 				<ul>
 					<a href="#" class="btn btn-block btn-social btn-facebook">
 						<span class="fa fa-facebook"></span> Sign In
 					</a>
 				</ul>				
-			</div>
-			<div class="col-md-2 banner-left">
+			</div> -->
+			<div class="col-md-2 banner-left"> <!-- used to be 2 KYLE-->
 				<h1><a href="/index">MU<span>SIC</span> <i>AKA</i></a></h1>
 			</div>
 			<div class="clearfix"></div>
 		</div>
+
+
 		<div class="banner-albums">
 			<div id="portfoliolist">
 							<div class="port-grid">
@@ -232,8 +247,40 @@
 			
 					<h3>HELLO THERE</h3>
 					<h4>Welcome to the world of music aka</h4>
-					<p> We are glad you stopped by!<br> 
-					Share your music story and join the community now.</p>
+					<!-- LOGIN FORM -->
+<div class="text-center" style="padding:5px 0">
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="login-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="lg_username" class="sr-only">Username</label>
+						<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="lg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+					</div>
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" id="lg_remember" name="lg_remember">
+						<label for="lg_remember">remember</label>
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<h4>forgot your password? <a href="/accountrecovery">click here</a></h4>
+				<br>
+				<h4>new user? <a href="/registration">create new account</a></h4>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
+
+					
 			</div>
 
 		<!-- latest
@@ -398,6 +445,7 @@
 <!-- //banner -->
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
+
 <!-- //for bootstrap working -->
 <!-- smooth scrolling -->
 	<script type="text/javascript">
