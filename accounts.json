@@ -1,0 +1,12 @@
+{
+  "superusers": [
+    { "username":"admin",
+      "password":"admin"},
+    { "username":"kyle",
+      "password":"zhu"},
+    { "username":"aeri",
+      "password":"iamsiri"},
+    { "username":"arnold",
+      "password":"chen"}
+  ]
+}
