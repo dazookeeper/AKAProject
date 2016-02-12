@@ -10,7 +10,7 @@ var errorHandler = require('errorhandler');
 var http = require('http');
 var server = http.createServer (app);
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var about = require('./routes/about');
 var artists = require('./routes/artists');
