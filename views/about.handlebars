@@ -36,29 +36,13 @@
 	<script src="js/hover_pack.js"></script>
 </head>
 <body>
+
 <!-- banner -->
 <div class="banner">
 	<div class="col-md-10 banner-right">
 		<div class="navigation">
 			<div class="nav-left">
-				<span class="menu"><img src="img/menu.png" alt=""/></span>
-						<ul class="nav1">
-							<li class="hvr-underline-from-left button2"><a href="/index">Home</a></li>
-							<li class="hvr-underline-from-left button2"><a class="active" href="/about">About</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/artists">Artists</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/shortcodes">Short Codes</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/contact">Contact</a></li>
-						</ul>
-						<!-- script for menu -->
-							<script> 
-								$( "span.menu" ).click(function() {
-								$( "ul.nav1" ).slideToggle( 300, function() {
-								 // Animation complete.
-								});
-								});
-							</script>
-						<!-- //script for menu -->
-					
+				<span class="menu"><img src="img/back.png" alt=""/></span>
 			</div>
 
 	<div class="col-md-2 banner-left">
@@ -230,6 +214,7 @@
 					<p>As computer science students at the University of California, San Diego,
 					we are interested in the intersection between technology and music. Having the
 					ability to spread stories and empathy with technology is exciting.</p>		
+					<!--
 					<div class="about-row">
 						<div class="col-md-4 about-imgs">
 							<img src="img/g3.jpg" alt="" class="img-responsive zoom-img"/>
@@ -243,39 +228,7 @@
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-				<div class="col-md-4 about-grids">
-					<h4>Short Blurbs</h4>
-					<div class="pince">
-						<div class="pince-left">
-							<h5>01</h5>
-						</div>
-						<div class="pince-right">
-							<p>Arnold likes to watch movies in his spare time.
-							You can find him at the theatres and on Netflix.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="pince">
-						<div class="pince-left">
-							<h5>02</h5>
-						</div>
-						<div class="pince-right">
-							<p>Kyles like to produce music as a side hobby.
-							You can find him at every electronic music event.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="pince">
-						<div class="pince-left">
-							<h5>03</h5>
-						</div>
-						<div class="pince-right">
-							<p>Aeri likes to travel and explore the world.
-							You can find her relaxing at the beach under the sun.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
+				-->
 				<div class="clearfix"> </div>
 			</div>
 	</div>
@@ -289,7 +242,7 @@
 						<li>
 							<div class="testimonials-grid">
 								<div class="testimonials-grid-left1">
-									<img src="img/t1.png" alt=" " class="img-responsive" />
+									<img src="img/story.png" alt=" " class="img-responsive" />
 								</div>
 								<div class="testimonials-grid-right1">
 									<p><span>S</span>tory-telling. Have an outlet to express your emotions.
@@ -303,7 +256,7 @@
 						<li>
 							<div class="testimonials-grid">
 								<div class="testimonials-grid-left1">
-									<img src="img/t2.png" alt=" " class="img-responsive" />
+									<img src="img/discovery.png" alt=" " class="img-responsive" />
 								</div>
 								<div class="testimonials-grid-right1">
 									<p><span>D</span>iscovery. Find out about something new!
@@ -316,7 +269,7 @@
 						<li>
 							<div class="testimonials-grid">
 								<div class="testimonials-grid-left1">
-									<img src="img/t3.png" alt="" class="img-responsive" />
+									<img src="img/creativity.png" alt="" class="img-responsive" />
 								</div>
 								<div class="testimonials-grid-right1">
 									<p><span>C</span>reativity. There is a large amount of
@@ -423,7 +376,7 @@
 							<div class="nbs-flexisel-container"><div class="nbs-flexisel-inner"><ul id="flexiselDemo1" class="nbs-flexisel-ul" style="left: -285px; display: block;">																																		
 								<li class="nbs-flexisel-item" style="width: 285px;">
 									<div class="team-left">
-										<img src="img/team-1.jpg" alt="">
+										<img src="img/arnold.jpg" alt="" id="PFP">
 										<div class="team-bottom">
 											<h4>Arnold C.</h4>
 											<p>Software engineer</p>
@@ -432,7 +385,7 @@
 								</li>
 								<li class="nbs-flexisel-item" style="width: 285px;">
 									<div class="team-left">
-										<img src="img/team-2.jpg" alt="">
+										<img src="img/kyle.jpg" alt="" id="PFP">
 										<div class="team-bottom">
 											<h4>Kyle Z.</h4>
 											<p>Software engineer</p>
@@ -441,7 +394,7 @@
 								</li>
 								<li class="nbs-flexisel-item" style="width: 285px;">
 									<div class="team-left">
-										<img src="img/team-3.jpg" alt="">
+										<img src="img/aeri.jpg" alt="" id="PFP">
 										<div class="team-bottom">
 											<h4>Aeri I.</h4>
 											<p>Software engineer</p>
@@ -482,6 +435,42 @@
 						</div>
 					</div>	
 					<!--//team-->
+
+				<div class="col-md-4 about-grids">
+					<h3 class="tittle">Short Blurbs</h3>
+					<div class="pince">
+						<div class="pince-left">
+							<h5>01</h5>
+						</div>
+						<div class="pince-right">
+							<p>Arnold likes to watch movies in his spare time.
+							You can find him at the theatres and on Netflix.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="pince">
+						<div class="pince-left">
+							<h5>02</h5>
+						</div>
+						<div class="pince-right">
+							<p>Kyles like to produce music as a side hobby.
+							You can find him at every electronic music event.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="pince">
+						<div class="pince-left">
+							<h5>03</h5>
+						</div>
+						<div class="pince-right">
+							<p>Aeri likes to travel and explore the world.
+							You can find her relaxing at the beach under the Southern California sun.</p>
+							<br>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -490,9 +479,10 @@
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
   	<center>
-			<a href="/artists" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-home"></span> Artists</a>
-			<a href="/review" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Review</a>
-  		<a href="/profile" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
+			<a href="/review" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span></a>
+			<a href="/artists" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th"></span> Artists</a>
+  		<a href="/profile" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
+  		<a href="/about" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
   	</center>
   </div>
 </nav>

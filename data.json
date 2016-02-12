@@ -2,11 +2,108 @@
   "artist": [
     { "name": "Taylor Swift",
       "image": "lorempixel.people.1.jpeg",
-      "id": "taylorswift"
+      "id": "taylorswift",
+      "reviews":
+      [
+        {
+          "reviewId": "0000",
+          "author": "Bernie",
+          "date": "Jan 20th 2016",
+          "rating": "5",
+          "body": "I think she's fabulous on stage! OMG TAYTAY"
+        },
+        {
+          "reviewId": "0001",
+          "author": "Donald",
+          "date": "Jan 1st 2016",
+          "rating": "1",
+          "body": "What a yuuuuge performace but it lackins American spirit. I will make America great again!!!!"
+        },
+        {
+          "reviewId": "0002",
+          "author": "Hilary",
+          "date": "Jan 22th 2016",
+          "rating": "3",
+          "body": "GOOD, SOLID, Jennifer Lawerence...I mean Taylor Swift is the best"
+        },
+        {
+          "reviewId": "0003",
+          "author": "Ted",
+          "date": "Jan 20th 2016",
+          "rating": "3",
+          "body": "Taylor Swift performed on stage at Antarctica yesterday it was great"
+        },
+        {
+          "reviewId": "0004",
+          "author": "Jeb",
+          "date": "Mar 7th 2015",
+          "rating": "2",
+          "body": "My brother watched TayTay's peformance, he said it was terrible"
+        },
+        {
+          "reviewId": "0005",
+          "author": "John",
+          "date": "Aug 28th 2015",
+          "rating": "4",
+          "body": "Many people may not agree with me, but I think she's pretty good"
+        },
+        {
+          "reviewId": "0006",
+          "author": "Marco",
+          "date": "Jan 4th 2016",
+          "rating": "5",
+          "body": "Let's dispel the fact that Taylor Swift doesn't know what she's doing. She knows exactly what she's doing"
+        },
+        {
+          "reviewId": "0007",
+          "author": "Jim",
+          "date": "Feb 2nd 2016",
+          "rating": "2",
+          "body": "I'm neutral!!!!"
+        },
+        {
+          "reviewId": "0009",
+          "author": "Ben",
+          "date": "Jun 19th 2015",
+          "rating": "1",
+          "body": "Clothes too revealing!!"
+        },
+        {
+          "reviewId": "0010",
+          "author": "Chris",
+          "date": "July 25th 2015",
+          "rating": "4",
+          "body": "I don't like Marco! But I love TayTay!!"
+        }
+      ]
     },
     { "name": "Kanye West",
       "image": "lorempixel.people.1.jpeg",
-      "id": "kanyewest"
+      "id": "kanyewest",
+      "reviews":
+      [
+        {
+          "reviewId": "0000",
+          "author": "Bernie",
+          "date": "Jan 20th 2016",
+          "rating": "5",
+          "body": "I think he's fabulous on stage! OMG KayKay"
+        },
+        {
+          "reviewId": "0001",
+          "author": "Donald",
+          "date": "Jan 1st 2016",
+          "rating": "1",
+          "body": "What a yuuuuge performace but it lackins American spirit. I will make America great again!!!!"
+        },
+        {
+          "reviewId": "0002",
+          "author": "Hilary",
+          "date": "Jan 22th 2016",
+          "rating": "3",
+          "body": "GOOD, SOLID, Kevin Hart...I mean Kayne West is the best"
+        }
+      ]
     },
     { "name": "Porter Robinson",
       "image": "lorempixel.people.1.jpeg",
