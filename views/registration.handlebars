@@ -16,8 +16,17 @@
 <link href="css/bootstrap-social.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 
+
+
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
+<!-- login form  -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<script src="js/login.js"></script>
+<link rel="stylesheet" href="/css/login.css">
+
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<!-- start-smoth-scrolling -->
@@ -63,93 +72,70 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
-		
-		<!-- contact -->
-		<div class="contact-top">
-				<div class="contact-form">
-					<form>
-						<input type="text" placeholder="Who did you see?" required="">
-						<input type="text" placeholder="Where did you see them?" required="">
-
-            <div class="row">
-		        	<center>
-		        	<div class="col-sm-9">
-		            <div class="btn-group" data-toggle="buttons">
-	                <label class="btn btn-default">
-	                    <input type="radio" id="q156" name="quality[25]" value="1" /> 1 
-	                </label> 
-	                <label class="btn btn-default">
-	                    <input type="radio" id="q157" name="quality[25]" value="2" /> 2
-	                </label> 
-	                <label class="btn btn-default">
-	                    <input type="radio" id="q158" name="quality[25]" value="3" /> 3
-	                </label> 
-	                <label class="btn btn-default">
-	                    <input type="radio" id="q159" name="quality[25]" value="4" /> 4
-	                </label> 
-	                <label class="btn btn-default active">
-	                		 <input type="radio" id="q159" name="quality[25]" value="5" /> 5
-	                </label> 
-		            </div>
-		          </div>
-		          </center>
-		        </div>
-
-	          <div class="row">
-		        	<center>
-			        <div class="col-sm-9">
-			            <div  >
-		                <label >
-		                    <input type="radio" id="q128" value="1" checked="checked" />
-		                		<img src="http://4.bp.blogspot.com/-ZgtYQpXq0Yo/UZEDl_PJLhI/AAAAAAAADnk/2pgkDG-nlGs/s1600/facebook-smiley-face-for-comments.png">
-		                </label> 
-		                <label >
-		                    <input type="radio" id="q129" value="2" />
-		                    <img src="http://3.bp.blogspot.com/-2xtlB3F7l4U/UZFOZ1FWvrI/AAAAAAAADoI/9P9JWS-ZIEI/s1600/facebook-cry-emoticon-crying-symbol.png">
-		                </label> 
-		                <label >
-		                    <input type="radio" id="q130" value="3" />
-		                    <img src="http://1.bp.blogspot.com/-MB8OSM9zcmM/TvitChHcRRI/AAAAAAAAAiE/kdA6RbnbzFU/s400/surprised%2Bemoticon.png">
-		                </label> 
-		                <label >
-		                    <input type="radio" id="q131" value="4" />
-		                    <img src="http://3.bp.blogspot.com/-wn2wPLAukW8/U1vy7Ol5aEI/AAAAAAAAGq0/f7C6-otIDY0/s1600/squinting-emoticon.png">
-		                </label> 
-		                <label >
-		                    <input type="radio" id="q132" value="5" />
-		                    <img src="http://3.bp.blogspot.com/-h2ErlFczszQ/TvirzZanEUI/AAAAAAAAAh4/rghgvQxSXmQ/s400/devil%2Bemoticon.png">
-		                </label>
-			            </div>
-			        	</div>
-			       </center>
-			    	</div>
-
-		    		<br>
-						<input type="text" placeholder="Describe your experience in one sentence!" required="">
-						<textarea placeholder="Your chance to elaborate..." required=""></textarea>
-						
-						<input type="submit" class="form-control" value="submit">
-					</form>
-				</div>
-		</div>
-		<!-- //contact -->
-
-
-<!-- <nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-  	<center>
-			<a href="/artists" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home"></span> Artists</a>
-			<a href="/review" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-plus"></span> Review</a>
-  		<a href="/profile" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
-  	</center>
-  </div>
-</nav> -->
-
 	</div>
 	<div class="clearfix"></div>
 </div>
 
-<!-- //banner -->
+
+<!-- REGISTRATION FORM -->
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">register</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="register-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="reg_username" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="reg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+					</div>
+					<div class="form-group">
+						<label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+						<input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+					</div>
+					
+					<div class="form-group">
+						<label for="reg_email" class="sr-only">Email</label>
+						<input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+					</div>
+					<div class="form-group">
+						<label for="reg_fullname" class="sr-only">Full Name</label>
+						<input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
+					</div>
+					
+					<div class="form-group login-group-checkbox">
+						<input type="radio" class="" name="reg_gender" id="male" placeholder="username">
+						<label for="male">male</label>
+						
+						<input type="radio" class="" name="reg_gender" id="female" placeholder="username">
+						<label for="female">female</label>
+					</div>
+					
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" class="" id="reg_agree" name="reg_agree">
+						<label for="reg_agree">i agree with <a href="#">terms</a></label>
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="/">login here</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
+
+
+
+
+
+
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
