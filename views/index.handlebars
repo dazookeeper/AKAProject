@@ -30,8 +30,6 @@
 <script type="text/javascript" src="js/accounts.js"></script>
 <!-- javascript for login -->
 
-
-
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<!-- start-smoth-scrolling -->
@@ -439,12 +437,21 @@
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
-  	<center>
-			<a href="/review" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span></a>
-			<a href="/artists" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-th"></span> Artists</a>
-  		<a href="/profile" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
-  		<a href="/about" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
-  	</center>
+    <center>
+      <div class="dropup">      
+        <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" display="inline" float="left">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="/about">About</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="/">Sign out</a></li>
+        </ul>
+      </div>
+      <a href="/artists" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th"></span> Artists</a>
+      <a href="/profile" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
+      <a href="/review" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span></a>
+    </center>
   </div>
 </nav>
 

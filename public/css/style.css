@@ -247,15 +247,15 @@ font-style:normal;
 /*-- //banner-bottom --*/
 /*-- footer --*/
 .footer{
-padding:20px 35px;
-background:#464646;
+	padding:20px 35px;
+	background:#464646;
 }
 .footer-grid h4{
-  font-family: 'FjallaOne-Regular';
-text-transform:uppercase;
-color:#fff;
-font-size:25px;
-margin-bottom: 22px;
+	font-family: 'FjallaOne-Regular';
+	text-transform:uppercase;
+	color:#fff;
+	font-size:25px;
+	margin-bottom: 22px;
 }
 .footer-grid ul li {
   list-style-type: none;
@@ -268,10 +268,10 @@ margin-bottom: 22px;
   text-decoration:none;
 }
 .footer-grid ul li a:hover{
-color:#BBE42A;
+	color:#BBE42A;
 }
 .footer-grid h2 a{
-text-decoration:none;
+	text-decoration:none;
   font-family: 'FjallaOne-Regular';
   font-size: 35px;
   color:#fff;
@@ -283,22 +283,78 @@ text-decoration:none;
   margin-top: 25px;
 }
 .footer-grid p a{
-text-decoration:none;
-color:#BBE42A;
+	text-decoration:none;
+	color:#BBE42A;
 }
-.footer-grid p a:hover{
-color:#a5a5a5;
+	.footer-grid p a:hover{
+	color:#a5a5a5;
 }
 /*-- //footer --*/
 /*-- best --*/
 
+.dropup {
+	display: inline;
+	float: left;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#biggreen {
+	text-transform: uppercase;
+  font-family: 'FjallaOne-Regular';
+  font-size: 34px;
+  color:#BBE42A;
+  margin: 0px 0 45px 0;
+  text-align: center;
+}
+
+#biggray {
+	text-transform: uppercase;
+  font-family: 'FjallaOne-Regular';
+  font-size: 34px;
+  color:#9c9c9c;
+  margin: 0px 0 45px 0;
+  text-align: center;
+}
+
 h3.tittle {
-text-transform:uppercase;
+	text-transform: uppercase;
   font-family: 'FjallaOne-Regular';
   font-size: 35px;
   color:#BBE42A;
   margin: 0px 0 45px 0;
   text-align: center;
+}
+
+h3#tittle {
+  font-family: 'FjallaOne-Regular';
+  margin: 0px 0 5px 0;
+  text-decoration: underline;
+}
+
+h3#tittle a:hover{
+  font-family: 'FjallaOne-Regular';
+  margin: 0px 0 5px 0;
+  color:#BBE42A;
+  text-decoration: underline;
 }
 
 .servc-grids h4 {

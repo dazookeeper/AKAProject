@@ -20,7 +20,7 @@ function verifyLogin(e) {
 	var username = document.getElementById("lg_username").value;
 	var password = document.getElementById("lg_password").value;
 	if ( username == "admin" && password == "admin") {
-		alert ("Login successfully");
+		alert("Login successfully");
 		window.location = "/artists"; // Redirecting to other page.
 		return false;
 	}

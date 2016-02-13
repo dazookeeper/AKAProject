@@ -42,13 +42,13 @@
 	<div class="col-md-10 banner-right">
 		<div class="navigation">
 			<div class="nav-left">
-				<span class="menu"><img src="img/back.png" alt=""/></span>
+				<span class="menu"><img src="" alt=""/></span>
 			</div>
-
-	<div class="col-md-2 banner-left">
-		<h1><a href="/index">MU<span>SIC</span> <i>AKA</i></a></h1>
-	</div>
 			<div class="clearfix"></div>
+			<center>
+		    <font id="biggreen">MUSIC</font> 
+		    <font id="biggray">AKA</font>
+		  </center>
 		</div>
 		<div class="banner-albums">
 			<div id="portfoliolist">
@@ -479,10 +479,19 @@
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
   	<center>
-			<a href="/review" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span></a>
+			<div class="dropup">  		
+  			<button class="btn btn-info btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" display="inline" float="left">
+			    <span class="glyphicon glyphicon-menu-hamburger"></span>
+			  </button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+			    <li><a href="/about">About</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="/">Sign out</a></li>
+			  </ul>
+			</div>
 			<a href="/artists" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th"></span> Artists</a>
   		<a href="/profile" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
-  		<a href="/about" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+			<a href="/review" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span></a>
   	</center>
   </div>
 </nav>
