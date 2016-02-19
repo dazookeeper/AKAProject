@@ -26,6 +26,7 @@ var index = require('./routes/index');
 var shortcodes = require('./routes/shortcodes');
 var artist = require('./routes/artist');
 
+
 var reviewLoad= require ('./routes/reviewLoad');
 var editProfileLoad = require ('./routes/editProfileLoad');
 var editSubmit = require('./routes/editSubmit');
@@ -63,7 +64,10 @@ app.get('/profile', profile.view);
 app.get('/editprofile', editprofile.view);
 app.get('/index', index.view);
 app.get('/shortcodes', shortcodes.view);
-app.get('/artist/:name', artist.viewArtist);
+// app.get('/artist/:name', artist.viewArtist);
+app.get('/artist/porter-robinson', artists.viewPorterRobinson);
+app.get('/artist/taylor-swift', artists.viewTaylorSwift);
+app.get('/artist/kanye-west', artists.viewKanyeWest);
 app.get('/registration', registration.view);
 app.get('/accountrecovery', accountrecovery.view);
 app.get('/reviewLoad', reviewLoad.loadReview);
