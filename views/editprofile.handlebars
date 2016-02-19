@@ -56,11 +56,12 @@
 
 					<form>
 						<h3>About Me</h3>
-						<textarea placeholder="Maximum of 300 characters" required="" maxlength="300"></textarea>
+                        <!--<input type="text" class="form-control" id="aboutme" placeholder="Maximum of 300 characters" name="aboutme">-->
+						<textarea placeholder="Maximum of 300 characters" required="" maxlength="300" id="aboutme" name="aboutme"></textarea>
 		    		<br>
 		    			<h3>Favorites</h3>
 						<input type="text" placeholder="Favorite artist #1" required="">
-						<input type="text" placeholder="Favorite artist #2" required="">
+						<input type="text" placeholder="Favorite artist #2" required="" id="fav2">
 						<input type="text" placeholder="Favorite artist #3" required="">
 
 					<br>
@@ -86,7 +87,7 @@
 
 						<br>
 						<br>
-						<input type="submit" class="form-control" value="submit">
+						<input type="submit" class="form-control" value="submit" id="submit">
 					</form>
 				</div>
 		</div>
@@ -117,6 +118,11 @@
 	<div class="clearfix"></div>
 </div>
 
+
+
+
+
+<script src="js/editProfile.js"></script>
 <!-- //banner -->
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>

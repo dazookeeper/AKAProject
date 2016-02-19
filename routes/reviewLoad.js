@@ -11,5 +11,4 @@ exports.loadReview = function(req, res) {
     console.log(oneArtist[0]);
     res.json(oneArtist[0]);
     //console.log("This project has a name of: "+name);
-
 };
