@@ -28,6 +28,8 @@ var artist = require('./routes/artist');
 
 
 var reviewLoad= require ('./routes/reviewLoad');
+var editProfileLoad = require ('./routes/editProfileLoad');
+var editSubmit = require('./routes/editSubmit');
 
 
 // all environments
@@ -69,7 +71,8 @@ app.get('/artist/kanye-west', artists.viewKanyeWest);
 app.get('/registration', registration.view);
 app.get('/accountrecovery', accountrecovery.view);
 app.get('/reviewLoad', reviewLoad.loadReview);
-
+app.get('/editProfileLoad', editProfileLoad.loadProfile);
+app.get('/editSubmit', editSubmit.edit);
 // delete this line if NOT using socket.io
 var io = require('socket.io').listen(server);   
 
