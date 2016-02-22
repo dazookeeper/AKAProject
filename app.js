@@ -11,6 +11,7 @@ var http = require('http');
 var server = http.createServer (app);
 var path = require('path');
 var handlebars = require('express3-handlebars');
+var mongodb = require('mongodb');
 
 var registration = require('./routes/registration');
 var accountrecovery = require('./routes/accountrecovery');
