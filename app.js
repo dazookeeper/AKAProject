@@ -1,3 +1,14 @@
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+   console.log("Connected to Mongoose!");
+});
+var Experience = require('./models/experience');
+
+
+
 var express = require('express');
 var app = express();
 var favicon = require('serve-favicon');
@@ -11,7 +22,6 @@ var http = require('http');
 var server = http.createServer (app);
 var path = require('path');
 var handlebars = require('express3-handlebars');
-var mongodb = require('mongodb');
 
 var registration = require('./routes/registration');
 var accountrecovery = require('./routes/accountrecovery');

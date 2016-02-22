@@ -15,6 +15,8 @@ $(document).ready(function() {
  */
 function initializePage() {
     //console.log("cooool bro");
+    $('#submitreview').click(submitReview);
+
 
     $.get("/reviewLoad", insertReview);
     $.get("/editProfileLoad", insertProfile);
@@ -67,4 +69,31 @@ function insertReview(result){
     var string = '<h4>Experience 1 </h4>'+'<p>'+theBody+'</p>';
     where.html(string);*/
 }
+
+
+
+
+
+
+
+
+
+//kyle's practice bit
+
+function submitReview(event) {
+    event.preventDefault();
+
+    // var review = mongoose.model('Experience', ExperienceSchema);
+
+
+    // console.log($('form').serializeArray());
+    var who = $('#who').val();
+    var where = $('#where').val();
+    // var rating = $('input[name=quality[25]]:checked').val();
+
+    console.log(who);
+    console.log(where);
+    // console.log(rating);
+}
+
 
