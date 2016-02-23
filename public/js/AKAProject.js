@@ -18,6 +18,10 @@ function initializePage() {
     $('#submitreview').click(submitReview);
 
 
+
+
+
+
     $.get("/reviewLoad", insertReview);
     $.get("/editProfileLoad", insertProfile);
 
@@ -48,12 +52,19 @@ function insertProfile(result){
 }
 
 function insertReview(result){
-    console.log("vsdvdfv");
-    console.log(result[0]);
+    //console.log("vsdvdfv");
+    //console.log(result[0]);
+    var artistUrl=window.location.href.split('/')[4];
+    console.log(artistUrl);
+
+    var j;
+    if (artistUrl=="taylor-swft"){j=0;}
+    else if (artistUrl=="kayne-west"){j=1;}
+    else if (artistUrl=="porter-robinson") {j=2;}
     var i;
     var x=1;
     var where = $("#review"+x);
-    var hold = result[0];
+    var hold = result[j];
     var review = hold['reviews'];
 
     for (i = 0; i < 4; i++) {
@@ -95,9 +106,9 @@ function submitReview(event) {
 
     var obj = 
     {
-        "user"  : "temporary",
-        "who"     : who,
-        "where"   : where,
+        "name"  : "temporary",
+        "image"     : who,
+        "id"   : where,
         "emoticon": 1,
         "summary" : "a",
         "review"  : "a"
