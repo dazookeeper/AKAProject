@@ -43,7 +43,6 @@ var reviewLoad= require ('./routes/reviewLoad');
 var editProfileLoad = require ('./routes/editProfileLoad');
 var editSubmit = require('./routes/editSubmit');
 
-
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -92,3 +91,22 @@ var io = require('socket.io').listen(server);
 server.listen(app.get('port'), function(){
    console.log('Express server on port ' + app.get('port'));
 });
+
+
+
+// var router = express.Router();
+// router.use(function(req, res, next) {
+// 	console.log('Something is happening.');
+// 	next();
+// });
+
+// router.get('/', function(req, res) {
+// 	var query = Experience.find({}).limit(10);
+// 	query.exec(function (err, docs) {
+// 		if (err) {
+// 			throw Error;
+// 		}
+// 		res.render('review', {Experience: docs});
+// 	});
+// }); 
+// app.use('/', router);
