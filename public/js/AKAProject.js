@@ -83,12 +83,25 @@ function insertReview(result){
 function submitReview(event) {
     event.preventDefault();
 
-    // var review = mongoose.model('Experience', ExperienceSchema);
+
+
+    // db.collection('Experience').insert(review);
 
 
     // console.log($('form').serializeArray());
     var who = $('#who').val();
     var where = $('#where').val();
+
+    var obj = 
+    {
+        "user"  : "temporary",
+        "who"     : who,
+        "where"   : where,
+        "emoticon": 1,
+        "summary" : "a",
+        "review"  : "a"
+    }
+    $.post("/reviewSubmit", obj, null);
     // var rating = $('input[name=quality[25]]:checked').val();
 
     console.log(who);
