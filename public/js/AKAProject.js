@@ -14,7 +14,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-    //console.log("cooool bro");
+    console.log("cooool bro");
     $('#submitreview').click(submitReview);
 
 
@@ -48,12 +48,13 @@ function insertProfile(result){
 }
 
 function insertReview(result){
-   // console.log("vsdvdfv");
-    //console.log(result['name']);
+    console.log("vsdvdfv");
+    console.log(result[0]);
     var i;
     var x=1;
     var where = $("#review"+x);
-    var review = result['reviews'];
+    var hold = result[0];
+    var review = hold['reviews'];
 
     for (i = 0; i < 4; i++) {
         var first = review[i];

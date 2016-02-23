@@ -117,11 +117,59 @@
     },
     { "name": "Porter Robinson",
       "image": "lorempixel.people.1.jpeg",
-      "id": "porterrobinson"
+      "id": "porterrobinson",
+      "reviews":
+      [
+        {
+          "reviewId": "0000",
+          "author": "Bernie",
+          "date": "Jan 20th 2016",
+          "rating": "5",
+          "body": "I think he's fabulous on stage! OMG KayKay"
+        },
+        {
+          "reviewId": "0001",
+          "author": "Donald",
+          "date": "Jan 1st 2016",
+          "rating": "1",
+          "body": "What a yuuuuge performace but it lackins American spirit. I will make America great again!!!!"
+        },
+        {
+          "reviewId": "0002",
+          "author": "Hilary",
+          "date": "Jan 22th 2016",
+          "rating": "3",
+          "body": "GOOD, SOLID, Kevin Hart...I mean Kayne West is the best"
+        }
+      ]
     },
     { "name": "RL Grime",
       "image": "lorempixel.people.1.jpeg",
-      "id": "rlgrime"
+      "id": "rlgrime",
+      "reviews":
+      [
+        {
+          "reviewId": "0000",
+          "author": "Bernie",
+          "date": "Jan 20th 2016",
+          "rating": "5",
+          "body": "I think he's fabulous on stage! OMG KayKay"
+        },
+        {
+          "reviewId": "0001",
+          "author": "Donald",
+          "date": "Jan 1st 2016",
+          "rating": "1",
+          "body": "What a yuuuuge performace but it lackins American spirit. I will make America great again!!!!"
+        },
+        {
+          "reviewId": "0002",
+          "author": "Hilary",
+          "date": "Jan 22th 2016",
+          "rating": "3",
+          "body": "GOOD, SOLID, Kevin Hart...I mean Kayne West is the best"
+        }
+      ]
     }
   ]
 }
