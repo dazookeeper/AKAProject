@@ -14,9 +14,14 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-    console.log("cooool bro");
     $('#submitreview').click(submitReview);
-
+    // $(':text').keyup(function() {
+    //     if($('#who').val() != "" && $('#where').val() != "" && $('#summary').val() != "" && $('#review').val() != "") {
+    //        $('#submitreview').removeAttr('disabled');
+    //     } else {
+    //        $('#submitreview').attr('disabled', true);   
+    //     }
+    // });
 
 
 
@@ -52,6 +57,7 @@ function insertProfile(result){
 }
 
 function insertReview(result){
+
     //console.log("vsdvdfv");
     //console.log(result[0]);
     var artistUrl=window.location.href.split('/')[4];
@@ -61,6 +67,7 @@ function insertReview(result){
     if (artistUrl=="taylor-swft"){j=0;}
     else if (artistUrl=="kayne-west"){j=1;}
     else if (artistUrl=="porter-robinson") {j=2;}
+
     var i;
     var x=1;
     var where = $("#review"+x);
@@ -93,32 +100,49 @@ function insertReview(result){
 //kyle's practice bit
 
 function submitReview(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
-
-
-    // db.collection('Experience').insert(review);
-
-
-    // console.log($('form').serializeArray());
     var who = $('#who').val();
     var where = $('#where').val();
 
-    var obj = 
-    {
-        "name"  : "temporary",
-        "image"     : who,
-        "id"   : where,
-        "emoticon": 1,
-        "summary" : "a",
-        "review"  : "a"
-    }
-    $.post("/reviewSubmit", obj, null);
-    // var rating = $('input[name=quality[25]]:checked').val();
+    var quality = $('input[name="quality"]:checked').val();
+    var mood = $('input[name="mood"]:checked').val();
+    var summary = $('#summary').val();
+    var review = $('#review').val();
 
-    console.log(who);
-    console.log(where);
-    // console.log(rating);
+    var submit = $('#who').val() != "" && $('#where').val() != "" && $('#summary').val() != "" && $('#review').val() != "";
+    if (submit) {
+        event.preventDefault();
+        var d = new Date();
+
+        var month = d.getMonth()+1;
+        var day = d.getDate();
+
+        var output = d.getFullYear() + '/' +
+        (month<10 ? '0' : '') + month + '/' +
+        (day<10 ? '0' : '') + day;
+
+        var obj = 
+        {
+            "date"    : output,
+            "user"    : "temporary",
+            "who"     : who,
+            "where"   : where,
+            "quality" : quality,
+            "mood"    : mood, 
+            "summary" : summary,
+            "review"  : review
+        }
+        // console.log(obj);
+    
+        $.post("/reviewSubmit", obj, null);
+        alert("Review submitted Successfully! Redirecting to Music Review");
+        location.reload();
+    }
+
+}
+function postReview(event) {
+    res.redirect("/review");
 }
 
 
