@@ -15,7 +15,13 @@ $(document).ready(function() {
  */
 function initializePage() {
     $('#submitreview').click(submitReview);
-
+    // $(':text').keyup(function() {
+    //     if($('#who').val() != "" && $('#where').val() != "" && $('#summary').val() != "" && $('#review').val() != "") {
+    //        $('#submitreview').removeAttr('disabled');
+    //     } else {
+    //        $('#submitreview').attr('disabled', true);   
+    //     }
+    // });
 
     $.get("/reviewLoad", insertReview);
     $.get("/editProfileLoad", insertProfile);
@@ -90,28 +96,35 @@ function submitReview(event) {
     var summary = $('#summary').val();
     var review = $('#review').val();
 
-    var d = new Date();
+    var submit = $('#who').val() != "" && $('#where').val() != "" && $('#summary').val() != "" && $('#review').val() != "";
+    if (submit) {
+        event.preventDefault();
+        var d = new Date();
 
-    var month = d.getMonth()+1;
-    var day = d.getDate();
+        var month = d.getMonth()+1;
+        var day = d.getDate();
 
-    var output = d.getFullYear() + '/' +
-    (month<10 ? '0' : '') + month + '/' +
-    (day<10 ? '0' : '') + day;
+        var output = d.getFullYear() + '/' +
+        (month<10 ? '0' : '') + month + '/' +
+        (day<10 ? '0' : '') + day;
 
-    var obj = 
-    {
-        "date"    : output,
-        "user"    : "temporary",
-        "who"     : who,
-        "where"   : where,
-        "quality" : quality,
-        "mood"    : mood, 
-        "summary" : summary,
-        "review"  : review
+        var obj = 
+        {
+            "date"    : output,
+            "user"    : "temporary",
+            "who"     : who,
+            "where"   : where,
+            "quality" : quality,
+            "mood"    : mood, 
+            "summary" : summary,
+            "review"  : review
+        }
+        // console.log(obj);
+    
+        $.post("/reviewSubmit", obj, null);
+        alert("Review submitted Successfully! Redirecting to Music Review");
+        location.reload();
     }
-    console.log(obj);
-    // $.post("/reviewSubmit", obj, postReview);
 
 }
 function postReview(event) {
