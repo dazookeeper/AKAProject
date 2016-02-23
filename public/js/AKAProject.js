@@ -81,7 +81,7 @@ function insertReview(result){
 //kyle's practice bit
 
 function submitReview(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     var who = $('#who').val();
     var where = $('#where').val();
@@ -90,9 +90,19 @@ function submitReview(event) {
     var summary = $('#summary').val();
     var review = $('#review').val();
 
+    var d = new Date();
+
+    var month = d.getMonth()+1;
+    var day = d.getDate();
+
+    var output = d.getFullYear() + '/' +
+    (month<10 ? '0' : '') + month + '/' +
+    (day<10 ? '0' : '') + day;
+
     var obj = 
     {
-        "user"  : "temporary",
+        "date"    : output,
+        "user"    : "temporary",
         "who"     : who,
         "where"   : where,
         "quality" : quality,
@@ -100,7 +110,8 @@ function submitReview(event) {
         "summary" : summary,
         "review"  : review
     }
-    $.post("/reviewSubmit", obj, postReview);
+    console.log(obj);
+    // $.post("/reviewSubmit", obj, postReview);
 
 }
 function postReview(event) {
