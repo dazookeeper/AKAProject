@@ -14,7 +14,6 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-    console.log("cooool bro");
     $('#submitreview').click(submitReview);
 
 
@@ -48,7 +47,7 @@ function insertProfile(result){
 }
 
 function insertReview(result){
-    console.log("vsdvdfv");
+    // console.log("vsdvdfv");
     console.log(result[0]);
     var i;
     var x=1;
@@ -84,30 +83,28 @@ function insertReview(result){
 function submitReview(event) {
     event.preventDefault();
 
-
-
-    // db.collection('Experience').insert(review);
-
-
-    // console.log($('form').serializeArray());
     var who = $('#who').val();
     var where = $('#where').val();
+    var quality = $('input[name="quality"]:checked').val();
+    var mood = $('input[name="mood"]:checked').val();
+    var summary = $('#summary').val();
+    var review = $('#review').val();
 
     var obj = 
     {
         "user"  : "temporary",
         "who"     : who,
         "where"   : where,
-        "emoticon": 1,
-        "summary" : "a",
-        "review"  : "a"
+        "quality" : quality,
+        "mood"    : mood, 
+        "summary" : summary,
+        "review"  : review
     }
-    $.post("/reviewSubmit", obj, null);
-    // var rating = $('input[name=quality[25]]:checked').val();
+    $.post("/reviewSubmit", obj, postReview);
 
-    console.log(who);
-    console.log(where);
-    // console.log(rating);
+}
+function postReview(event) {
+    res.redirect("/review");
 }
 
 

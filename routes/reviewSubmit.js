@@ -1,6 +1,3 @@
-
-
-
 exports.loadReview = function (req, res){
 	console.log("loadReviewloadReview");
 	console.log(req.body);
