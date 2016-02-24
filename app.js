@@ -30,7 +30,10 @@ var accountrecovery = require('./routes/accountrecovery');
 var about = require('./routes/about');
 var artists = require('./routes/artists');
 var review = require('./routes/review');
+
 var reviewSubmit = require('./routes/reviewSubmit');
+var editSubmit = require('./routes/editSubmit');
+
 var contact = require('./routes/contact');
 var profile = require('./routes/profile');
 var editprofile = require('./routes/editprofile');
@@ -83,8 +86,8 @@ app.get('/registration', registration.view);
 app.get('/accountrecovery', accountrecovery.view);
 app.get('/reviewLoad', reviewLoad.loadReview);
 app.get('/editProfileLoad', editProfileLoad.loadProfile);
-app.get('/editSubmit', editSubmit.edit);
 app.post('/reviewSubmit', reviewSubmit.loadReview);
+app.post('/editSubmit', editSubmit.pushProfile);
 // delete this line if NOT using socket.io
 var io = require('socket.io').listen(server);   
 

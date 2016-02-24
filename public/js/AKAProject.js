@@ -141,8 +141,5 @@ function submitReview(event) {
     }
 
 }
-function postReview(event) {
-    res.redirect("/review");
-}
 
 

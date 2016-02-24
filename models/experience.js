@@ -6,7 +6,7 @@ var ExperienceSchema = new Schema({
 	user	: String,
 	who		: String,
 	where	: String,
-	mood : Number,
+	mood 	: Number,
 	emoticon: Number,
 	summary	: String,
 	review	: String

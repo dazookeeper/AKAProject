@@ -18,6 +18,7 @@
 
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/editProfile.js"></script>
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<!-- start-smoth-scrolling -->
@@ -38,7 +39,7 @@
 <!-- banner -->
 <div class="banner">
 	<div class="col-md-10 banner-right">
-		<div class="navigation">
+		<div class="navigation" style="padding:5px 0 10px 0px;">
 			<div class="nav-left">
 				<a href="/profile"><span class="menu"><img src="img/back.png" alt=""/></span></a>
 			</div>
@@ -50,8 +51,8 @@
 		</div>
 
 		<!-- contact -->
-		<div class="contact-top">
-				<div class="contact-form">
+		<div class="contact-top" style="padding:0px 12px;">
+				<div class="contact-form" >
 
 
 					<form>
@@ -60,23 +61,23 @@
 						<textarea placeholder="Maximum of 300 characters" required="" maxlength="300" id="aboutme" name="aboutme"></textarea>
 		    		<br>
 		    			<h3>Favorites</h3>
-						<input type="text" placeholder="Favorite artist #1" required="">
+						<input type="text" placeholder="Favorite artist #1" required="" id="fav1">
 						<input type="text" placeholder="Favorite artist #2" required="" id="fav2">
-						<input type="text" placeholder="Favorite artist #3" required="">
+						<input type="text" placeholder="Favorite artist #3" required="" id="fav3">
 
-					<br>
+					<!-- <br>
 		    			<h3>Venues</h3>
 						<input type="text" placeholder="Venue #1" required="">
 						<input type="text" placeholder="Venue #2" required="">
-						<input type="text" placeholder="Venue #3" required="">
+						<input type="text" placeholder="Venue #3" required=""> -->
 
 					<br>
 		    			<h3>Genres</h3>
-						<input type="text" placeholder="Genre #1" required="">
-						<input type="text" placeholder="Genre #2" required="">
-						<input type="text" placeholder="Genre #3" required="">
+						<input type="text" placeholder="Genre #1" required="" id="gen1">
+						<input type="text" placeholder="Genre #2" required="" id="gen2">
+						<input type="text" placeholder="Genre #3" required="" id="gen3">
 
-					<br>
+					<!-- <br>
 		    			<h3>Moods</h3>
 						<input type="text" placeholder="Mood #1" required="">
 						<input type="text" placeholder="Mood #2" required="">
@@ -86,8 +87,12 @@
 						
 
 						<br>
+						<br> -->
 						<br>
-						<input type="submit" class="form-control" value="submit" id="submit">
+						<input type="submit" class="form-control" value="submit" id="submitprofile">
+						<br>
+						<br>
+						<br>
 					</form>
 				</div>
 		</div>
@@ -122,7 +127,6 @@
 
 
 
-<script src="js/editProfile.js"></script>
 <!-- //banner -->
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
