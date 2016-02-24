@@ -65,18 +65,28 @@ function insertReview(result){
 
     var j;
     if (artistUrl=="taylor-swift"){j=0;}
-    else if (artistUrl=="kayne-west"){j=1;}
+    else if (artistUrl=="kanye-west"){j=1;}
     else if (artistUrl=="porter-robinson") {j=2;}
 
     var i;
     var x=1;
     var firstname=$("#biggreen");
     var lastname =$("#biggray");
+    var whereabout=$("#about");
+    var whereImg = $("#profileImg");
     var where = $("#review"+x);
     var hold = result[j];
     var review = hold['reviews'];
+    var image = hold["image"];
+    image='<img id="PFP" class="thumbnail" src="../img/'+image+'">';
+    whereImg.html(image);
     firstname.html(hold['name'].split(' ')[0].toUpperCase());
     lastname.html(hold['name'].split(' ')[1].toUpperCase());
+
+    var about = hold["about"];
+    var firstchar=about.slice(0,1);
+    about= '<p><span>'+firstchar+'</span>'+about.slice(1)+'</p>';
+    whereabout.html(about);
 
 
     for (i = 0; i < 4; i++) {
