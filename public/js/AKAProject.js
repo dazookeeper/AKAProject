@@ -64,15 +64,20 @@ function insertReview(result){
     console.log(artistUrl);
 
     var j;
-    if (artistUrl=="taylor-swft"){j=0;}
+    if (artistUrl=="taylor-swift"){j=0;}
     else if (artistUrl=="kayne-west"){j=1;}
     else if (artistUrl=="porter-robinson") {j=2;}
 
     var i;
     var x=1;
+    var firstname=$("#biggreen");
+    var lastname =$("#biggray");
     var where = $("#review"+x);
     var hold = result[j];
     var review = hold['reviews'];
+    firstname.html(hold['name'].split(' ')[0].toUpperCase());
+    lastname.html(hold['name'].split(' ')[1].toUpperCase());
+
 
     for (i = 0; i < 4; i++) {
         var first = review[i];
@@ -81,7 +86,6 @@ function insertReview(result){
         where.html(string);
         x++;
         where = $("#review"+x);
-
     }
     /*var first  = review[0]
     var theBody   = first['body'];
