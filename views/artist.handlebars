@@ -53,7 +53,7 @@
 		<div class="container">
 			<center>
 			<div class="rating">
-		    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+		    <span>★</span><span>★</span><span>★</span><span>★</span><span>★<!-- ☆ --></span>
 			</div>
                 <div id="profileImg">
                     <!--<img id="PFP" class="thumbnail" src="../img/tf0.png">-->
@@ -72,8 +72,10 @@
         <div class="clearfix"> </div>
       </div>
 
+
+
       <!--gallery-starts--> 
-      <div class="gallery">
+      <!-- <div class="gallery">
       <div class="fea-top">
         <h3 class="tittle">FEATURED SPOTLIGHT</h3>
       </div>
@@ -85,7 +87,6 @@
             <div class="mask mask-1"></div>
             <div class="mask mask-2"></div>
             <div class="content">
-              <!--<a href="/artists/{{id}}"><h4>TAYLOR SWIFT</h4></a>-->
               <h4>MUSIC LIFE</h4>
               <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
               
@@ -137,7 +138,10 @@
           </div>
           <div class="clearfix"> </div>
         </div>
-      </div>
+      </div> -->
+
+
+
     <!--gallery-ends--> 
 		  <!--
 			<div id="coverflow">
@@ -192,17 +196,21 @@
 				<div class="feature-botttom">
           {{name}}
           {{#each totalReview}}
-            <p>
-              Review ID: {{reviewId}}<br>
-              Author: {{author}}<br>
+          <div class="container">
+              <h3>{{summary}}</h3><br>
+              <!-- Review ID: {{reviewId}}<br> -->
+              <h4>Reviewed by: {{author}}</h4><br>
               Date: {{date}}<br>
-              Rating: {{rating}}<br>
-              Review Img: {{reviewImg}}<br>
-              Body: {{body}}<br>
-              Mood: {{mood}}<br>
+              Where: {{where}}<br>
+              Rating: {{rating}} out of 5<br>
+              Emoticon: {{emoticon}}<br>
+              <!-- Review Img: {{reviewImg}}<br> -->
+              <p>{{review}}</p><br>
+              
+
               <br>
               <br>
-            </p>
+          </div>
           {{/each}}
 
           <!--
