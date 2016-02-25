@@ -3,7 +3,7 @@ exports.pushProfile = function (req, res) {
     //console.log(req.body);
 
     var MongoClient = require('mongodb').MongoClient;
-    MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function(err,db) {
+    MongoClient.connect('mongodb://admin:admin@ds017248.mlab.com:17248/heroku_6v7wv7qw', function(err,db) {
         // db.collection('Profile', function(err, collection) { if (!err) {
         //         // collection.update(
         //         //     {"date": req.body.date,
