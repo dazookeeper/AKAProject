@@ -67,6 +67,7 @@ function insertReview(result){
     if (artistUrl=="taylor-swift"){j=0;}
     else if (artistUrl=="kanye-west"){j=1;}
     else if (artistUrl=="porter-robinson") {j=2;}
+    else if (artistURL=="rl-grime") {j=3;}
 
     var i;
     var x=1;
