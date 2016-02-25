@@ -6,9 +6,6 @@ exports.loadReview = function (req, res){
         if(!err) {
             console.log("We are connected");
             db.collection('artist', function(err, collection) { if (!err) {
-
-
-
                 var string= '{"reviewId":"0000",'+'"author":"'+req.body.user+'",'+'"date":"'+req.body.date+
                         '",'+'"rating":"'+ req.body.mood+'",'+'"reviewImg": "#",'+'"body":"'+
                     req.body.review+'",'+ '"mood" : "happy"}';

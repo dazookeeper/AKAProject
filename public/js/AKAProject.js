@@ -61,7 +61,7 @@ function insertReview(result){
     //console.log("vsdvdfv");
     //console.log(result[0]);
     var artistUrl=window.location.href.split('/')[4];
-    console.log(artistUrl);
+    //console.log(artistUrl);
 
     var j;
     /*if (artistUrl=="taylor-swift"){j=0;}
