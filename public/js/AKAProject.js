@@ -64,10 +64,15 @@ function insertReview(result){
     console.log(artistUrl);
 
     var j;
-    if (artistUrl=="taylor-swift"){j=0;}
+    /*if (artistUrl=="taylor-swift"){j=0;}
     else if (artistUrl=="kanye-west"){j=1;}
     else if (artistUrl=="porter-robinson") {j=2;}
-    else if (artistURL=="rl-grime") {j=3;}
+    else if (artistURL=="rl-grime") {j=3;}*/
+   // var jsonArray=result.toArray;
+    console.log(result.length);
+    for (j=0; j<result.length; j++){
+        if (result[j].name.toLowerCase()===artistUrl.split('-')[0]+' '+artistUrl.split('-')[1]){ break;}
+    }
 
     var i;
     var x=1;
