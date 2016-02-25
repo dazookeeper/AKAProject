@@ -56,7 +56,7 @@ function editProfileSubmit(event) {
             "gen1"    : gen1,
             "gen2"    : gen2,
             "gen3"    : gen3
-        }
+        };
         console.log(obj);
     
         $.post("/editSubmit", obj, null);

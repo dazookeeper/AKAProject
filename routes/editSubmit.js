@@ -1,9 +1,9 @@
-exports.pushProfile = function (req, res){
-    console.log(req.body);
+exports.pushProfile = function (req, res) {
+    
+    //console.log(req.body);
+
     var MongoClient = require('mongodb').MongoClient;
     MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function(err,db) {
-        if(err) throw err;
-
         // db.collection('Profile', function(err, collection) { if (!err) {
         //         // collection.update(
         //         //     {"date": req.body.date,
@@ -25,15 +25,11 @@ exports.pushProfile = function (req, res){
 
         // db.collection.find({"user": "temporary"}).delete();
         if (!err) {
-            db.collection('Profile', function (err, collection) {
-                if (!err) {
-                    collection.findOne().remove();
-                    console.log("SUCCESSFULLY REMOVED FROM PROFILE");
-                }
-            });
+            db.collection('Profile').remove({}, true);
+            //console.log("SUCCESSFULLY REMOVED FROM PROFILE");            
+            db.collection('Profile').insert(req.body);
+            //console.log("SUCCESSFULLY UPDATED PROFILE");
         }
-
-        db.collection('Profile').insert(req.body);
     });
 
 
