@@ -15,7 +15,7 @@ exports.viewArtist = function(req, res) {
     var MongoClient = require('mongodb').MongoClient;
     MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function (err, db) {
         if (!err) {
-            console.log("We are connected");
+            //console.log("We are connected");
             db.collection('artist', function (err, collection) {
                 if (!err) {
                     collection.find({"name": artist}).toArray(function (err, docs) {
@@ -31,6 +31,7 @@ exports.viewArtist = function(req, res) {
                             *
                             *
                             * */
+                            return
                             res.render('review', JSON.parse(string));
 
                         } else {
