@@ -15,7 +15,8 @@ exports.viewArtist = function(req, res) {
     var MongoClient = require('mongodb').MongoClient;
     
     // RENDER 3 - aeri
-   /* MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function (err, db) {
+   /*
+    MongoClient.connect('mongodb://admin:admin@ds017248.mlab.com:17248/heroku_6v7wv7qw', function (err, db) {
         if (!err) {
             db.collection('artist', function (err, collection) {
                 if (!err) {
@@ -29,7 +30,7 @@ exports.viewArtist = function(req, res) {
         }
     });*/
 
-    MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function (err, db) {
+    MongoClient.connect('mongodb://admin:admin@ds017248.mlab.com:17248/heroku_6v7wv7qw', function (err, db) {
         if (!err) {
             //console.log("We are connected");
             db.collection('artist', function (err, collection) {
