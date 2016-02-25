@@ -63,7 +63,8 @@
 						<img src="img/story.png" alt=" " class="img-responsive" />
 					</div>
 
-					<div class="testimonials-grid-right1" id="aboutme">
+					<div class="testimonials-grid-right1" id="aboutme"> <!-- id="aboutme" -->
+						<p>{{profileinfo.aboutme}}</p>
 						<!--<p><span>H</span>ello!</p>-->
                         <!-- My name is Aeri and I like listening to all different kinds of music.
                         I live in San Diego, California and enjoy going to the beach.
@@ -80,9 +81,13 @@
 						<div class="featured-services-grd">
 							<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 							<h4>Favorites</h4>
-							<p><a href="artist/taylor-swift"><u>Taylor Swift</u></a><br>
-							<a href="artist/porter-robinson"><u>Porter Robinson</u><br></a>
-							<a href="artist/kanye-west"><u>Kanye West</u><br></a>
+							<p>
+							<!-- <a href="artist/taylor-swift"><u>{{profileinfo.fav1}}</u></a><br>
+							<a href="artist/porter-robinson"><u>{{profileinfo.fav2}}</u><br></a>
+							<a href="artist/kanye-west"><u>{{profileinfo.fav3}}</u><br></a> -->
+							{{profileinfo.fav1}}<br>
+							{{profileinfo.fav2}}<br>
+							{{profileinfo.fav3}}<br>
 							</p>
 						</div>
 					</div>
@@ -100,10 +105,10 @@
 						<div class="featured-services-grd">
 							<span class="glyphicon glyphicon-music" aria-hidden="true"></span>
 							<h4>Genres</h4>
-							<p>Hip Hop<br>
+							<p>{{profileinfo.gen1}}<br>
 
-							Acoustic<br>
-							Pop<br>
+							{{profileinfo.gen2}}<br>
+							{{profileinfo.gen3}}<br>
 							</p>
 						</div>
 					</div>
@@ -121,7 +126,7 @@
 				</div>
 			</div>	
 		<!-- //features -->
-		
+
 			<div class="features-main">
 				<div class="fea-top">
 				  <h3 class="tittle">MEMORY LANE</h3>

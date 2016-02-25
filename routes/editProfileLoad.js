@@ -9,6 +9,6 @@ exports.loadProfile = function(req, res) {
     // console.log(reviewLoad['artist']);
    // var oneArtist= reviewLoad['artist'];
     //console.log(oneArtist[0]);
-    res.json(editProfileLoad);
+    // res.json(editProfileLoad);
     //console.log("This project has a name of: "+name);
 };

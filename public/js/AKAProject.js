@@ -28,33 +28,33 @@ function initializePage() {
 
 
     $.get("/reviewLoad", insertReview);
-    $.get("/editProfileLoad", insertProfile);
+    // $.get("/editProfileLoad", insertProfile);
 
    // where.html()
 }
 
 
-function insertProfile(result){
-    var where1 = $("#aboutme");
-    var where2 = $("#favs");
-    var where3 = $("#venues");
-    var where4 = $("#genres");
-    var where5 = $("#moods");
+// function insertProfile(result){
+//     var where1 = $("#aboutme");
+//     var where2 = $("#favs");
+//     var where3 = $("#venues");
+//     var where4 = $("#genres");
+//     var where5 = $("#moods");
 
-    //console.log(result["AboutMe"]);
-    var AboutMe= '<p><span>H</span>ello! '+result["AboutMe"]+'</p>';
-    var favorites= '<a href="'+result['Favorite1Link']+'"><u>'+result['Favorite1']+'</u></a><br>'+result['Favorite2']+'<br>'+result['Favorite3']+'<br>';
-    var venues = result["Venue1"]+'<br>'+result["Venue2"]+'<br>'+result["Venue3"]+'<br>';
-    var genres = result["Genre1"]+'<br>'+result["Genre2"]+'<br>'+result["Genre3"]+'<br>';
-    var moods = result["Mood1"]+'<br>'+result["Mood2"]+'<br>'+result["Mood3"]+'<br>';
+//     //console.log(result["AboutMe"]);
+//     var AboutMe= '<p><span>H</span>ello! '+result["AboutMe"]+'</p>';
+//     var favorites= '<a href="'+result['Favorite1Link']+'"><u>'+result['Favorite1']+'</u></a><br>'+result['Favorite2']+'<br>'+result['Favorite3']+'<br>';
+//     var venues = result["Venue1"]+'<br>'+result["Venue2"]+'<br>'+result["Venue3"]+'<br>';
+//     var genres = result["Genre1"]+'<br>'+result["Genre2"]+'<br>'+result["Genre3"]+'<br>';
+//     var moods = result["Mood1"]+'<br>'+result["Mood2"]+'<br>'+result["Mood3"]+'<br>';
 
 
-    where5.html(moods);
-    where4.html(genres);
-    where3.html(venues);
-    where2.html(favorites);
-    where1.html(AboutMe);
-}
+//     where5.html(moods);
+//     where4.html(genres);
+//     where3.html(venues);
+//     where2.html(favorites);
+//     where1.html(AboutMe);
+// }
 
 function insertReview(result){
 
