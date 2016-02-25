@@ -152,12 +152,11 @@ function submitReview(event) {
             "mood"    : mood, 
             "summary" : summary,
             "review"  : review
-        }
-        // console.log(obj);
-    
+        };
+        
         $.post("/reviewSubmit", obj, null);
         alert("Review submitted Successfully! Redirecting to Music Review");
-        location.reload();
+        location.reload(); 
     }
 
 }

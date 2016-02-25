@@ -1,6 +1,7 @@
 exports.loadReview = function (req, res){
 	//console.log("loadReviewloadReview");
-	//console.log(req.body);
+    //console.log(req.body);
+
 	var MongoClient = require('mongodb').MongoClient;
 	MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function(err,db) {
         if(!err) {
@@ -12,9 +13,10 @@ exports.loadReview = function (req, res){
                 var goodJson=JSON.parse(string);
                 //console.log(goodJson);
                 //console.log(goodJson);
-                collection.update({"name": req.body.who},
-                    {$push: {"reviews": goodJson} } )
-                ; //end collection.find
+                collection.update(
+                    {"name": req.body.who},
+                    {$push: {"reviews": goodJson} } 
+                ); //end collection.find
                 db.close();
             } else {
                 throw err;

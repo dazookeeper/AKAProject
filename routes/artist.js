@@ -13,6 +13,22 @@ exports.viewArtist = function(req, res) {
     console.log(artist);
     //collection.find({"name": artist})(function(err, docs) {
     var MongoClient = require('mongodb').MongoClient;
+    
+    // RENDER 3 - aeri
+    MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function (err, db) {
+        if (!err) {
+            db.collection('artist', function (err, collection) {
+                if (!err) {
+                    collection.find({"name": artist}).toArray(function(err, results) {
+                        console.log(results[0].reviews);
+                        db.close();
+                        res.render('artist', {'totalReview': results[0].reviews});
+                    }); 
+                }
+            })
+        }
+    });
+    /*
     MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function (err, db) {
         if (!err) {
             //console.log("We are connected");
@@ -30,8 +46,9 @@ exports.viewArtist = function(req, res) {
                             *  HERE is RENDER 1
                             *
                             *
-                            * */
-                            return
+                            * 
+                            //return
+                            //console.log(string);
                             res.render('review', JSON.parse(string));
 
                         } else {
@@ -46,7 +63,7 @@ exports.viewArtist = function(req, res) {
         //if(err) throw err;
         //db.collection('Experience').insert(req.body);
     });
-
+    */
     /*
     *
     *
@@ -56,5 +73,5 @@ exports.viewArtist = function(req, res) {
     *
     * */
     //console.log(artist);
-    res.render('artist', {'name': name});
+    //res.render('artist', {'name': name});
 };
