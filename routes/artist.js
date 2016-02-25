@@ -15,7 +15,7 @@ exports.viewArtist = function(req, res) {
     var MongoClient = require('mongodb').MongoClient;
     
     // RENDER 3 - aeri
-    MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function (err, db) {
+   /* MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function (err, db) {
         if (!err) {
             db.collection('artist', function (err, collection) {
                 if (!err) {
@@ -27,8 +27,8 @@ exports.viewArtist = function(req, res) {
                 }
             })
         }
-    });
-    /*
+    });*/
+
     MongoClient.connect('mongodb://admin:admin@ds013908.mongolab.com:13908/heroku_qmhr9291', function (err, db) {
         if (!err) {
             //console.log("We are connected");
@@ -38,19 +38,8 @@ exports.viewArtist = function(req, res) {
                         if (!err) {
                             db.close();
                            // console.log(docs[0].reviews);
-
-                            var string = '{"reviews":'+JSON.stringify(docs[0].reviews)+'}';
-                            /*
-                            *
-                            *
-                            *  HERE is RENDER 1
-                            *
-                            *
-                            * 
-                            //return
-                            //console.log(string);
-                            res.render('review', JSON.parse(string));
-
+                            var string = '{"totalReview":'+JSON.stringify(docs[0].reviews)+'}';
+                            res.render('artist', JSON.parse(string));
                         } else {
                             throw err;
                         }
@@ -63,7 +52,7 @@ exports.viewArtist = function(req, res) {
         //if(err) throw err;
         //db.collection('Experience').insert(req.body);
     });
-    */
+
     /*
     *
     *
