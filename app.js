@@ -5,6 +5,32 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
    console.log("Connected to Mongoose!");
 });
+
+
+
+/////////
+
+var hbs = require('handlebars');
+var fs = require('fs');
+
+var partialsDir = __dirname + '/views/partials';
+
+var filenames = fs.readdirSync(partialsDir);
+
+filenames.forEach(function (filename) {
+    var matches = /^([^.]+).hbs$/.exec(filename);
+    if (!matches) {
+        return;
+    }
+    var name = matches[1];
+    var template = fs.readFileSync(partialsDir + '/' + filename, 'utf8');
+    hbs.registerPartial(name, template);
+});
+
+
+
+
+////////////
 var Experience = require('./models/experience');
 
 
@@ -95,6 +121,12 @@ var io = require('socket.io').listen(server);
 server.listen(app.get('port'), function(){
    console.log('Express server on port ' + app.get('port'));
 });
+
+
+
+
+
+
 
 
 
