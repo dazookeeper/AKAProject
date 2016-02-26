@@ -40,7 +40,7 @@ var editprofile = require('./routes/editprofile');
 var index = require('./routes/index');
 var shortcodes = require('./routes/shortcodes');
 var artist = require('./routes/artist');
-
+var artist2 = require('./routes/artist2');
 
 var reviewLoad= require ('./routes/reviewLoad');
 var editProfileLoad = require ('./routes/editProfileLoad');
@@ -79,6 +79,7 @@ app.get('/editprofile', editprofile.view);
 app.get('/index', index.view);
 app.get('/shortcodes', shortcodes.view);
 app.get('/artist/:name', artist.viewArtist);
+app.get('/artist2/:name', artist2.viewArtist);
 // app.get('/artist/porter-robinson', artists.viewPorterRobinson);
 // app.get('/artist/taylor-swift', artists.viewTaylorSwift);
 // app.get('/artist/kanye-west', artists.viewKanyeWest);
