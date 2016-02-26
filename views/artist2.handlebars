@@ -47,28 +47,44 @@
       <center>
         <font id="biggreen"></font>
         <font id="biggray"></font>
-        <h3 class="tittle">SHARED EXPERIENCES</h3>
+        <div class="container">
+      <center>
+      <div class="rating">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★<!-- ☆ --></span>
+      </div>
+                <div id="profileImg">
+                    <!--<img id="PFP" class="thumbnail" src="../img/tf0.png">-->
+                </div>
+
       </center>
-		</div>
 
-		<div class="container">
-
-      <!--
       <div class="testimonials-grid">
         <div class="testimonials-grid-left1">
           <img src="../img/creativity.png" alt=" " class="img-responsive" />
         </div>
         <div class="testimonials-grid-right1" id="about">
+            <!--<p><span>T</span>aylor Swift is a singer-songwriter and one of country music's top recording artists, having crossed over into pop and winning many awards and holding many performances.
+            </p>-->
         </div>
         <div class="clearfix"> </div>
       </div>
     </div>
-    -->
+
+        
+      </center>
+		</div>
+
+
+    <br>
+        <h3 class="tittle">SHARED EXPERIENCES</h3>
+        <div class="container"><h4>Click on the pictures to see more information about each experience.</h4></div>
 
       <div class="gallery">
        <script src="../js/lightbox.js"></script>
         <div class="gallery-bottom">
           {{#each totalReview}}
+
+          <h3>"{{summary}}" - temporary</h3>
           <div class="view view-ninth">
             <img src="../img/rave.jpg" alt="">
              <a class="example-image-link" href="../img/rave.jpg" data-lightbox="example-1" data-title="Music Life">
@@ -83,6 +99,7 @@
               </p>
             </div></a>
           </div>
+
           {{/each}}
           <div class="clearfix"> </div>
         </div>
