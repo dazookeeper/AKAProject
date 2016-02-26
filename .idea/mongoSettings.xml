@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MongoConfiguration">
+    <option name="serverConfigurations">
+      <list>
+        <ServerConfiguration>
+          <option name="label" value="akaprojectmongolab" />
+          <option name="password" value="admin" />
+          <option name="serverUrls">
+            <list>
+              <option value="ds013908.mongolab.com:13908" />
+            </list>
+          </option>
+          <option name="userDatabase" value="heroku_qmhr9291" />
+          <option name="username" value="admin" />
+        </ServerConfiguration>
+        <ServerConfiguration>
+          <option name="connectOnIdeStartup" value="true" />
+          <option name="label" value="newDB" />
+          <option name="password" value="admin" />
+          <option name="serverUrls">
+            <list>
+              <option value="ds017248.mlab.com:17248" />
+            </list>
+          </option>
+          <option name="userDatabase" value="heroku_6v7wv7qw" />
+          <option name="username" value="admin" />
+        </ServerConfiguration>
+      </list>
+    </option>
+    <option name="shellPath" value="/Applications/mongodb-osx-x86_64-3.2.3/bin/mongo" />
+  </component>
+</project>
