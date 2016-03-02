@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Music AKA | Life's an Entertainment</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content=""/>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/modernizr.custom.js"></script>
+<link href="css/bootstrap-social.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/editProfile.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smoth-scrolling -->
+	<script src="js/hover_pack.js"></script>
+</head>
+<body>
+<!-- banner -->
+<div class="banner">
+	<div class="col-md-10 banner-right">
+		<div class="navigation" style="padding:5px 0 10px 0px;">
+			<div class="nav-left">
+				<a href="/profile"><span class="menu"><img src="img/back.png" alt=""/></span></a>
+			</div>
+			<div class="clearfix"></div>
+			<center>
+		    <font id="biggreen">EDIT</font> 
+		    <font id="biggray">REVIEW</font>
+		  </center>
+		</div>
+
+		<!-- contact -->
+		<div class="contact-top" style="padding:0px 12px;">
+				<div class="contact-form" >
+
+
+					<form>
+						<h3>Review</h3>
+						<textarea placeholder="Full Review" id="review"></textarea>
+		    		<br>
+
+		    		<h3>Summary</h3>
+						<input type="text" placeholder="In One Sentence" id="summary">
+						<br><br>
+						{{review}}
+
+						<h3>Date</h3>
+						<input type="text" placeholder="YYYY/MM/DD" id="date">
+						<br><br>
+
+						<h3>Location</h3>
+						<input type="text" placeholder="Location" id="where">
+						<br><br>
+
+		    		<h3>Rating</h3>
+						<input type="text" placeholder="Rating" id="rating">
+						<br><br>
+
+						<h3>Mood</h3>
+						<input type="text" placeholder="Mood" id="mood">
+						<br><br>
+						
+						<br>
+						<input type="submit" class="form-control" value="submit" id="editreview1">
+						<br>
+						<br>
+						<br>
+					</form>
+				</div>
+		</div>
+		<!-- //contact -->
+
+
+<!--<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+  	<center>
+			<div class="dropup">  		
+  			<button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" display="inline" float="left">
+			    <span class="glyphicon glyphicon-menu-hamburger"></span>
+			  </button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+			    <li><a href="/about">About</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="/">Sign out</a></li>
+			  </ul>
+			</div>
+			<a href="/artists" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th"></span> Artists</a>
+  		<a href="/profile" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
+			<a href="/review" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span></a>
+  	</center>
+  </div>
+</nav>-->
+        {{>navbar1}}
+
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+
+
+
+
+<!-- //banner -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+</body>
+</html>

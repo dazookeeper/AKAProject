@@ -59,17 +59,18 @@ var review = require('./routes/review');
 
 var reviewSubmit = require('./routes/reviewSubmit');
 var editSubmit = require('./routes/editSubmit');
+var editSubmitReview = require('./routes/editSubmitReview');
 
 var contact = require('./routes/contact');
 var profile = require('./routes/profile');
 var editprofile = require('./routes/editprofile');
+var editreview = require('./routes/editreview');
 var index = require('./routes/index');
 var shortcodes = require('./routes/shortcodes');
 var artist = require('./routes/artist');
 
 var reviewLoad= require ('./routes/reviewLoad');
 var editProfileLoad = require ('./routes/editProfileLoad');
-var editSubmit = require('./routes/editSubmit');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -101,6 +102,7 @@ app.get('/review', review.view);
 app.get('/contact', contact.view);
 app.get('/profile', profile.view);
 app.get('/editprofile', editprofile.view);
+app.get('/editreview', editreview.view);
 app.get('/index', index.view);
 app.get('/shortcodes', shortcodes.view);
 app.get('/artist/:name', artist.viewArtist);
@@ -114,6 +116,7 @@ app.get('/reviewLoad', reviewLoad.loadReview);
 app.get('/editProfileLoad', editProfileLoad.loadProfile);
 app.post('/reviewSubmit', reviewSubmit.loadReview);
 app.post('/editSubmit', editSubmit.pushProfile);
+app.get('/editSubmitReview', editSubmitReview.pushReview);
 // delete this line if NOT using socket.io
 var io = require('socket.io').listen(server);   
 

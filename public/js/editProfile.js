@@ -84,18 +84,6 @@ function editProfileSubmit(event) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function changeValue() {
 
 
