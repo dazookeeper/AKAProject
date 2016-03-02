@@ -3,6 +3,9 @@
  */
 'use strict';
 
+
+
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
     //console.log("cooool bro jkdsf;lfjs;ldjflsd");
@@ -15,6 +18,7 @@ $(document).ready(function() {
  */
 function initializePage() {
     $('#submitreview').click(submitReview);
+    $('.potato').click(collapseIt);
     // $(':text').keyup(function() {
     //     if($('#who').val() != "" && $('#where').val() != "" && $('#summary').val() != "" && $('#review').val() != "") {
     //        $('#submitreview').removeAttr('disabled');
@@ -31,6 +35,15 @@ function initializePage() {
     // $.get("/editProfileLoad", insertProfile);
 
    // where.html()
+}
+
+
+function collapseIt(event){
+    event.preventDefault();
+    var $this = $(this);
+    var $collapse = $this.closest('.collapse-group').find('.collapse');
+    $collapse.collapse('toggle');
+    
 }
 
 

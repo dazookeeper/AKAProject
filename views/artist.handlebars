@@ -196,25 +196,39 @@
 				  <h3 class="tittle">SHARED EXPERIENCES</h3>
 				</div>
 				<div class="feature-botttom">
-          {{summary}}
           {{#each totalReview}}
-          <div class="container">
-              <h3>"{{summary}}"</h3><br>
-              <!-- Review ID: {{reviewId}}<br> -->
-              <h4>Reviewed by: {{author}}</h4><br>
-              Date: {{date}}<br>
-              Where: {{where}}<br>
-              Rating: {{rating}} out of 5<br>
-              Emoticon: {{emoticon}}<br>
-              <!-- Review Img: {{reviewImg}}<br> -->
-              <p>{{review}}</p>
-              <a href="/editreview" class="btn btn-warning btn-sm"></span>Edit Review</a>
-              <a href="/removereview" class="btn btn-danger btn-sm"></span>Delete Review</a>
-              <br>
-              <br>
-              <br>
+          
+          <div class="container" style="padding-top: 10px; padding-bottom: 15px; background-color: #e1e1e1; outline: #BBE42A">
+
+            <h3 id="reviewFont">"{{summary}}"</h3>
+            <h4>Reviewed by: {{author}}</h4><br>
+
+
+            <div class="collapse-group">
+                <!-- Review ID: {{reviewId}}<br> -->
+              <div class="collapse">
+                Date: <p id="reviewFont">{{date}}</p><br>
+                Where: <p id="reviewFont">{{where}}</p><br>
+                Rating: <p id="reviewFont">{{rating}}</p> out of 5<br>
+                Emoticon: <p id="reviewFont">{{emoticon}}</p><br>
+                <!-- Review Img: {{reviewImg}}<br> -->
+                <h4 id="reviewFont">{{review}}</h4>
+                <br>
+                <a href="/editreview" class="btn btn-warning btn-sm"></span>Edit Review</a>
+                <a href="/removereview" class="btn btn-danger btn-sm"></span>Delete Review</a>
+                <br>
+              </div>
+              <p><a class="btn btn-default potato">Toggle review &raquo;</a></p>
+            </div>
+            <br>
+
           </div>
           {{/each}}
+        </div>
+      </div>
+
+{{>navbar}}
+
 
                     <!------------------------------->
 
@@ -275,11 +289,7 @@
           <br>
           <br>
           -->
-				</div>
-			</div>
-	</div>
-</div>
-{{>navbar}}
+				
 
 
 <!--<nav class="navbar navbar-default navbar-fixed-bottom">

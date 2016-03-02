@@ -40,6 +40,7 @@ exports.viewArtist = function(req, res) {
                             db.close();
                            // console.log(docs[0].reviews);
                             var string = '{"totalReview":'+JSON.stringify(docs[0].reviews)+'}';
+                            
                             res.render('artist', JSON.parse(string));
                         } else {
                             throw err;

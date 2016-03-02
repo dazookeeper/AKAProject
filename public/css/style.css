@@ -356,6 +356,11 @@ h3#tittle a:hover{
   color:#BBE42A;
   text-decoration: underline;
 }
+#reviewFont {
+	font-family: 'FjallaOne-Regular';
+	color:#95b621;
+	display: inline;
+}
 
 .servc-grids h4 {
     font-size: 24px;
