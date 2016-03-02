@@ -44,7 +44,7 @@ function collapseIt(event){
     var $collapse = $this.closest('.collapse-group').find('.collapse');
     $collapse.collapse('toggle');
     console.log("sending google analytics");
-    ga("send", "event", "review", "click" )
+    ga("send", "event", "review", "click" );
     console.log("FINISHED sending google analytics");
     
 }
