@@ -47,7 +47,7 @@ function collapseIt(event){
     $collapse.collapse('toggle');
     console.log("sending google analytics artist");
     ga("send", "event", "review", "click" );
-    console.log("FINISHED sending google analytics");
+    // console.log("FINISHED sending google analytics");
     
 }
 
@@ -55,7 +55,7 @@ function googleAnalyticsClick(event) {
     // event.preventDefault();
     console.log("sending google analytics artist2");
     ga("send", "event", "review", "click" );
-    console.log("FINISHED sending google analytics");
+    // console.log("FINISHED sending google analytics");
 }
 
 
