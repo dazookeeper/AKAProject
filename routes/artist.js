@@ -47,7 +47,7 @@ exports.viewArtist = function(req, res) {
                         }
                     }); //end collection.find
                 } else {
-                    throw err;
+                    // throw err;
                 }
             }); //)
         }
@@ -113,7 +113,7 @@ exports.viewArtist2 = function(req, res) {
                         }
                     }); //end collection.find
                 } else {
-                    throw err;
+                    // throw err;
                 }
             }); //)
         }
