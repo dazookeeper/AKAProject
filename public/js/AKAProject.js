@@ -19,7 +19,8 @@ $(document).ready(function() {
 function initializePage() {
     $('#submitreview').click(submitReview);
     $('.potato').click(collapseIt);
-    $('.tomato').click(googleAnalyticsClick);
+    // $('.tomato').click(googleAnalyticsClick);
+    $('.view-ninth').click(googleAnalyticsClick);
 
     // $(':text').keyup(function() {
     //     if($('#who').val() != "" && $('#where').val() != "" && $('#summary').val() != "" && $('#review').val() != "") {
