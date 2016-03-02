@@ -15,7 +15,13 @@ exports.loadReview = function (req, res){
                 //console.log(goodJson);
                 collection.update(
                     {"name": req.body.who},
-                    {$push: {"reviews": goodJson} } 
+                    {$push: 
+                        {"reviews": {
+                            $each: [goodJson],
+                            $position: 0
+                            }
+                        } 
+                    }
                 ); //end collection.find
                 db.close();
             } else {
