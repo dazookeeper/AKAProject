@@ -17,7 +17,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-    $('#submitreview').click(submitReview);
+
     $('.potato').click(collapseIt);
     // $('.tomato').click(googleAnalyticsClick);
     $('.view-ninth').click(googleAnalyticsClick);
@@ -145,46 +145,6 @@ function insertReview(result){
 
 //kyle's practice bit
 
-function submitReview(event) {
-    // event.preventDefault();
 
-    var who = $('#who').val();
-    var where = $('#where').val();
-
-    var quality = $('input[name="quality"]:checked').val();
-    var mood = $('input[name="mood"]:checked').val();
-    var summary = $('#summary').val();
-    var review = $('#review').val();
-
-    var submit = $('#who').val() != "" && $('#where').val() != "" && $('#summary').val() != "" && $('#review').val() != "";
-    if (submit) {
-        event.preventDefault();
-        var d = new Date();
-
-        var month = d.getMonth()+1;
-        var day = d.getDate();
-
-        var output = d.getFullYear() + '/' +
-        (month<10 ? '0' : '') + month + '/' +
-        (day<10 ? '0' : '') + day;
-
-        var obj = 
-        {
-            "date"    : output,
-            "user"    : "temporary",
-            "who"     : who,
-            "where"   : where,
-            "quality" : quality,
-            "mood"    : mood, 
-            "summary" : summary,
-            "review"  : review
-        };
-        
-        $.post("/reviewSubmit", obj, null);
-        alert("Review submitted Successfully! Redirecting to Music Review");
-        location.reload(); 
-    }
-
-}
 
 

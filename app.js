@@ -120,14 +120,17 @@ app.post('/editSubmit', editSubmit.pushProfile);
 app.get('/editSubmitReview', editSubmitReview.pushReview);
 
 
-var AWS_ACCESS_KEY = "AKIAIPRY7BNMDBLMN6AA";
-var AWS_SECRET_KEY = "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";
+//var AWS_ACCESS_KEY = "AKIAIPRY7BNMDBLMN6AA";
+var AWS_ACCESS_KEY ="AKIAIQFJM4WHXN5BLE7Q";
+//var AWS_SECRET_KEY = "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";
+var AWS_SECRET_KEY = "XWii/4G1yycLI6qqKtgGCdIx9tLdfVJHAuyaC5/0";
 var S3_BUCKET = "akaimages";
 
 
 
 app.get('/sign_s3', function(req, res){
     aws.config.update({accessKeyId: AWS_ACCESS_KEY, secretAccessKey: AWS_SECRET_KEY});
+    console.log(aws.config);
     var s3 = new aws.S3();
     var s3_params = {
         Bucket: S3_BUCKET,
@@ -136,6 +139,7 @@ app.get('/sign_s3', function(req, res){
         ContentType: req.query.file_type,
         ACL: 'public-read'
     };
+    console.log(s3_params);
     s3.getSignedUrl('putObject', s3_params, function(err, data){
         if(err){
             console.log("wtf");
