@@ -19,6 +19,9 @@ $(document).ready(function() {
 function initializePage() {
     $('#submitreview').click(submitReview);
     $('.potato').click(collapseIt);
+    // $('.tomato').click(googleAnalyticsClick);
+    $('.view-ninth').click(googleAnalyticsClick);
+
     // $(':text').keyup(function() {
     //     if($('#who').val() != "" && $('#where').val() != "" && $('#summary').val() != "" && $('#review').val() != "") {
     //        $('#submitreview').removeAttr('disabled');
@@ -43,10 +46,17 @@ function collapseIt(event){
     var $this = $(this);
     var $collapse = $this.closest('.collapse-group').find('.collapse');
     $collapse.collapse('toggle');
-    console.log("sending google analytics");
+    console.log("sending google analytics artist");
     ga("send", "event", "review", "click" );
-    console.log("FINISHED sending google analytics");
+    // console.log("FINISHED sending google analytics");
     
+}
+
+function googleAnalyticsClick(event) {
+    // event.preventDefault();
+    console.log("sending google analytics artist2");
+    ga("send", "event", "review", "click" );
+    // console.log("FINISHED sending google analytics");
 }
 
 
