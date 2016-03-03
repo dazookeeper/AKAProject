@@ -102,7 +102,6 @@ function submitReview(event) {
         };
 
         $.post("/reviewSubmit", obj, null);
-        console.log("does this print?");
         alert("Review submitted Successfully! Redirecting to Music Review");
         location.reload();
     }
