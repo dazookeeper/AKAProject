@@ -48,6 +48,7 @@ var http = require('http');
 var server = http.createServer (app);
 var path = require('path');
 var handlebars = require('express3-handlebars');
+var aws = require('aws-sdk');
 
 var registration = require('./routes/registration');
 var accountrecovery = require('./routes/accountrecovery');
@@ -117,8 +118,58 @@ app.get('/editProfileLoad', editProfileLoad.loadProfile);
 app.post('/reviewSubmit', reviewSubmit.loadReview);
 app.post('/editSubmit', editSubmit.pushProfile);
 app.get('/editSubmitReview', editSubmitReview.pushReview);
+
+
+var AWS_ACCESS_KEY = "AKIAIPRY7BNMDBLMN6AA";
+var AWS_SECRET_KEY = "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";
+var S3_BUCKET = "akaimages";
+
+
+
+app.get('/sign_s3', function(req, res){
+    aws.config.update({accessKeyId: AWS_ACCESS_KEY, secretAccessKey: AWS_SECRET_KEY});
+    var s3 = new aws.S3();
+    var s3_params = {
+        Bucket: S3_BUCKET,
+        Key: req.query.file_name,
+        Expires: 60,
+        ContentType: req.query.file_type,
+        ACL: 'public-read'
+    };
+    s3.getSignedUrl('putObject', s3_params, function(err, data){
+        if(err){
+            console.log("wtf");
+            console.log(err);
+        }
+        else{
+            console.log("Jake for VP");
+            var return_data = {
+                signed_request: data,
+                url: 'https://'+S3_BUCKET+'.s3.amazonaws.com/'+req.query.file_name
+            };
+            res.write(JSON.stringify(return_data));
+            res.end();
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
 // delete this line if NOT using socket.io
 var io = require('socket.io').listen(server);   
+
+
+
+
 
 server.listen(app.get('port'), function(){
    console.log('Express server on port ' + app.get('port'));

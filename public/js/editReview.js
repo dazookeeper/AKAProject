@@ -24,6 +24,7 @@ function initializePage() {
 
 function editReviewSubmit(event) {
     // event.preventDefault();
+    console.log(this.attr(id).val);
 
     var review = $('.review').val();
     var summary = $('#summary').val();
