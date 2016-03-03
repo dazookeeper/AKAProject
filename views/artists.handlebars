@@ -36,6 +36,46 @@
 	<!-- start-smoth-scrolling -->
 	<script src="js/hover_pack.js"></script>
 </head>
+
+<script type="text/javascript">
+  
+    function search() {
+
+      var allArtists = ["Kanye West", "Porter Robinson", "Taylor Swift"];
+      var v = $("#srch-term").val().toLowerCase();
+      console.log("Search: " + v);
+    
+      allArtists.forEach(function(entry) {
+        console.log(entry);   
+        if (v == "") {
+          document.getElementById("artist_name_kw").style.display="block";
+          document.getElementById("artist_name_pr").style.display="block";
+          document.getElementById("artist_name_ts").style.display="block";
+        }
+        else if (entry.toLowerCase() == v && v == "kanye west") {
+          console.log("Match: Kanye West");
+          document.getElementById("artist_name_pr").style.display="block";
+          document.getElementById("artist_name_pr").style.display="none";
+          document.getElementById("artist_name_ts").style.display="none";
+        }
+        else if (entry.toLowerCase() == v && v == "porter robinson") {
+          console.log("Match: Porter Robinson");
+          document.getElementById("artist_name_kw").style.display="none";
+          document.getElementById("artist_name_pr").style.display="block";
+          document.getElementById("artist_name_ts").style.display="none";
+        }
+        else if (entry.toLowerCase() == v && v == "taylor swift") {
+          console.log("Match: Taylor Swift");
+          document.getElementById("artist_name_kw").style.display="none";
+          document.getElementById("artist_name_pr").style.display="none";
+          document.getElementById("artist_name_ts").style.display="block";
+        }
+      });
+      //return false;
+    }        
+
+</script>
+
 <body>
   
   <center>
@@ -43,24 +83,25 @@
     <font id="biggray">ARTISTS</font>
   </center>
   <br>
-  <br>
-  <!-- <div class="col-sm-3 col-md-3 pull-right">
-    <form class="navbar-form" role="search">
+
+  <div class="col-sm-3 col-md-3 pull-right">
+    <form class="navbar-form" role="search" onsubmit="search(); return false">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
         <div class="input-group-btn">
-          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+          <button class="btn btn-default" type="button" id="srch-btn" onclick="search()"><i class="glyphicon glyphicon-search"></i></button>
         </div>
       </div>
     </form>
-  </div> -->
+  </div>
+  <!--onKeyDown="if(event.keyCode==13)-->
 
 	<div class="clearfix"></div>
 
 	<!-- SlidesJS Required: Start Slides -->
   <!-- The container is used to define the width of the slideshow -->
   <div class="container">
-    <a href="/artist/kanye-west"><h3 id="tittle">Kanye West</h3></a>
+    <div id="artist_name_kw"><a href="/artist/kanye-west"><h3 id="tittle">Kanye West</h3></a>
     <div id="slides3">
       <img src="img/kw0.jpg">
       <img src="img/kw1.jpg">
@@ -69,9 +110,9 @@
       <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
       <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
     </div>
+    </div>
 
-
-    <a href="/artist/porter-robinson"><h3 id="tittle">Porter Robinson</h3></a>
+    <div id="artist_name_pr"><a href="/artist/porter-robinson"><h3 id="tittle">Porter Robinson</h3></a>
     <div id="slides2">
       <img src="img/pr1.jpg">
       <img src="img/pr2.jpg">
@@ -79,6 +120,7 @@
       <img src="img/pr4.jpg">
       <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
       <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
+    </div>
     </div>
 
     <!-- <a href="/artist/rl-grime"><h3 id="tittle">RL Grime</h3></a>
@@ -91,7 +133,7 @@
       <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
     </div> -->
 
-    <a href="/artist/taylor-swift"><h3 id="tittle">Taylor Swift</h3></a>
+    <div id="artist_name_ts"><a href="/artist/taylor-swift"><h3 id="tittle">Taylor Swift</h3></a>
     <div id="slides">
       <img src="img/tf1.jpg">
       <img src="img/tf3.jpg">
@@ -99,6 +141,7 @@
       <img src="img/tf5.jpg">
       <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
       <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
+    </div>
     </div>
     
   </div>
@@ -182,7 +225,7 @@
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
-<!-- smooth scrolling-->
+<!-- smooth scrolling
 	<script type="text/javascript">
 		$(document).ready(function() {
 		/*
@@ -195,7 +238,7 @@
 		*/								
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
-	</script>
+	</script>-->
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
 </body>
