@@ -45,6 +45,13 @@ function collapseIt(event){
     event.preventDefault();
     var $this = $(this);
     var $collapse = $this.closest('.collapse-group').find('.collapse');
+
+    console.log($this.closest('.pomme').val());
+
+
+
+
+
     $collapse.collapse('toggle');
     console.log("sending google analytics artist");
     ga("send", "event", "review", "click" );
