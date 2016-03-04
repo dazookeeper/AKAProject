@@ -60,7 +60,7 @@ function editProfileSubmit(event) {
         console.log(obj);
     
         $.post("/editSubmit", obj, null);
-        alert("Review submitted Successfully! Refreshing the page now...");
+        alert("Successfully made profile changes! Refreshing the page now...");
         location.reload();
     }
 

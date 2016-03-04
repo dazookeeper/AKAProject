@@ -9,21 +9,21 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/component.css" />
-<script src="js/modernizr.custom.js"></script>
-<link href="css/bootstrap-social.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/component.css" />
+<script src="../js/modernizr.custom.js"></script>
+<link href="../css/bootstrap-social.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 
 <!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/editProfile.js"></script>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/editProfile.js"></script>
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript" src="../js/move-top.js"></script>
+		<script type="text/javascript" src="../js/easing.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
@@ -33,7 +33,7 @@
 			});
 		</script>
 	<!-- start-smoth-scrolling -->
-	<script src="js/hover_pack.js"></script>
+	<script src="../js/hover_pack.js"></script>
 </head>
 <body>
 <!-- banner -->
@@ -41,7 +41,7 @@
 	<div class="col-md-10 banner-right">
 		<div class="navigation" style="padding:5px 0 10px 0px;">
 			<div class="nav-left">
-				<a href="/profile"><span class="menu"><img src="img/back.png" alt=""/></span></a>
+				<a href="/artists"><span class="menu"><img src="../img/back.png" alt=""/></span></a>
 			</div>
 			<div class="clearfix"></div>
 			<center>
@@ -50,39 +50,50 @@
 		  </center>
 		</div>
 
+		<script type="text/javascript">
+    	function editedit() {
+    		event.preventDefault();
+		    var review = $('#review').val();
+		    var summary = $('#summary').val();
+		    var date = $('#date').val();
+		    var where = $('#where').val();
+		    var reviewId = {{totalObject.reviewId}};
+        var obj = 
+        {
+            "review"    : review,
+            "summary" : summary,
+            "date"    : date,
+            "where"    : where,
+            "reviewId"			: reviewId
+        };
+        console.log(obj);
+        $.post("/editSubmitReview", obj, null);
+        alert("Successfully made review changes! Refreshing the page now...");
+        location.reload(); 
+		}
+    </script>
+
 		<!-- contact -->
 		<div class="contact-top" style="padding:0px 12px;">
 				<div class="contact-form" >
-
-
-					<form>
+					<form onsubmit="editedit(); return false">
+		
 						<h3>Review</h3>
-						<textarea placeholder="Full Review" id="review"></textarea>
-		    		<br>
-
+						<textarea placeholder="" id="review">{{totalObject.review}}</textarea>
+		    		
 		    		<h3>Summary</h3>
-						<input type="text" placeholder="In One Sentence" id="summary">
-						<br><br>
-						{{review}}
-
+						<input type="text" value="{{totalObject.summary}}" id="summary">
+					
 						<h3>Date</h3>
-						<input type="text" placeholder="YYYY/MM/DD" id="date">
-						<br><br>
+						<input type="text" value="{{totalObject.date}}" id="date">
+						<br>
 
 						<h3>Location</h3>
-						<input type="text" placeholder="Location" id="where">
-						<br><br>
-
-		    		<h3>Rating</h3>
-						<input type="text" placeholder="Rating" id="rating">
-						<br><br>
-
-						<h3>Mood</h3>
-						<input type="text" placeholder="Mood" id="mood">
-						<br><br>
-						
+						<input type="text" value="{{totalObject.where}}" id="where">
 						<br>
-						<input type="submit" class="form-control" value="submit" id="editreview1">
+						<br>
+
+						<input type="submit" class="form-control" value="submit" id="submiteditreview">
 						<br>
 						<br>
 						<br>
@@ -123,7 +134,7 @@
 
 <!-- //banner -->
 <!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
+	<script src="../js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
 <!-- smooth scrolling -->
 	<script type="text/javascript">

@@ -8,7 +8,7 @@ exports.loadReview = function (req, res){
             console.log("We are connected");
             //console.log(req.body.image);
             db.collection('artist', function(err, collection) { if (!err) {
-                var string= '{"reviewId":"0000",'+'"author":"'+req.body.user+'",'+'"date":"'+req.body.date+
+                var string= '{"reviewId":"'+req.body.pid+'",'+'"author":"'+req.body.user+'",'+'"date":"'+req.body.date+
                         '",'+'"rating":"'+ req.body.quality+'",'+'"reviewImg": "'+req.body.image+'",'+'"review":"'+
                     req.body.review+'",'+'"summary":"'+req.body.summary+'",'+'"where":"'+req.body.where+'",'+'"emoticon":"'+req.body.mood+'"}';
                 var goodJson=JSON.parse(string);

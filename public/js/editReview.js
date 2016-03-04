@@ -13,53 +13,36 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-    //console.log("cooool bro");
-
-    //console.log("hi2");
-    // $('#submit').click(changeValue);
-    //$.get("/editSubmit", insertReview);
-    // where.html()
-    $('#editreview').click(editReviewSubmit);
+    $('#submiteditreview').click(editReviewSubmit);
 }
 
 function editReviewSubmit(event) {
-    // event.preventDefault();
-    console.log(this.attr(id).val);
+    console.log("Initialize");
+    event.preventDefault();
 
-    var review = $('.review').val();
+    var review = $('#review').val();
+    console.log(review);
     var summary = $('#summary').val();
+    console.log(summary);
     var date = $('#date').val();
+    console.log(date);
     var where = $('#where').val();
-    var rating = $('#rating').val();
-    var mood = $('#mood').val();
+    console.log(where);
 
-    var submit = review!=""&&summary!=""&&date!=""&&where!=""&&rating!=""&&mood!="";
+    var submit = review!=""||summary!=""||date!=""||where!="";
     if (submit) {
-        event.preventDefault();
-        /*
-        var d = new Date();
-
-        var month = d.getMonth()+1;
-        var day = d.getDate();
-
-        var output = d.getFullYear() + '/' +
-        (month<10 ? '0' : '') + month + '/' +
-        (day<10 ? '0' : '') + day;
-        */
         var obj = 
         {
             "review"    : review,
             "summary" : summary,
             "date"    : date,
-            "where"    : where,
-            "rating"    : rating,
-            "mood"    : mood
+            "where"    : where
         };
         console.log(obj);
     
         $.post("/editSubmitReview", obj, null);
-        alert("Review submitted Successfully! Refreshing the page now...");
+        alert("Successfully made review changes! Refreshing the page now...");
         location.reload();
-    }
+    };
     
 }
