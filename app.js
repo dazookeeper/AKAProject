@@ -61,6 +61,7 @@ var review = require('./routes/review');
 var reviewSubmit = require('./routes/reviewSubmit');
 var editSubmit = require('./routes/editSubmit');
 var editSubmitReview = require('./routes/editSubmitReview');
+var editDeleteReview = require('./routes/editDeleteReview');
 
 var contact = require('./routes/contact');
 var profile = require('./routes/profile');
@@ -118,7 +119,7 @@ app.get('/editProfileLoad', editProfileLoad.loadProfile);
 app.post('/reviewSubmit', reviewSubmit.loadReview);
 app.post('/editSubmit', editSubmit.pushProfile);
 app.post('/editSubmitReview', editSubmitReview.pushReview);
-
+app.post('/editDeleteReview', editDeleteReview.deleteReview);
 
 //var AWS_ACCESS_KEY = "AKIAIPRY7BNMDBLMN6AA";
 var AWS_ACCESS_KEY ="AKIAIQFJM4WHXN5BLE7Q";
