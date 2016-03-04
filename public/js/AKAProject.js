@@ -54,7 +54,7 @@ function emojiReplace(){
     for (i=0; i< numItems; i++){
         var where=document.getElementsByClassName("pomme")[i];
         //var where = $(".pomme")[i];
-        console.log(where);
+        //console.log(where);
         var emoNum=document.getElementsByClassName("pomme")[i].innerHTML;
         switch(emoNum) {
             case '1':

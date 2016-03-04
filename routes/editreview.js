@@ -26,7 +26,8 @@ exports.viewReview = function(req, res) {
                             for (var i = 0; i < docs.length; i++) {
                                 for (var j = 0; j < docs[i].reviews.length; j++) {
                                     if (docs[i].reviews[j].reviewId == id)
-                                    string = '{"totalObject":'+JSON.stringify(docs[i].reviews[j])+'}';
+                                    string = '{"totalObject":'+JSON.stringify(docs[i].reviews[j])+
+                                        ',"name":'+JSON.stringify(docs[i].name)+'}';
                                 }
                             }                            
                             console.log(string);
