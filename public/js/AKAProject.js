@@ -46,7 +46,7 @@ function collapseIt(event){
     var $this = $(this);
     var $collapse = $this.closest('.collapse-group').find('.collapse');
 
-    console.log($this.closest('.pomme').val());
+    console.log($this.closest('.emo').find('.pomme').val());
 
 
 
