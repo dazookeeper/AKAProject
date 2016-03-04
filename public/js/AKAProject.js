@@ -17,6 +17,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+    emojiReplace();
 
     $('.potato').click(collapseIt);
     // $('.tomato').click(googleAnalyticsClick);
@@ -41,12 +42,52 @@ function initializePage() {
 }
 
 
+
+
+
+
+
+
+function emojiReplace(){
+    var numItems = $('.emo').length;
+    var i=0;
+    for (i=0; i< numItems; i++){
+        var where=document.getElementsByClassName("pomme")[i];
+        //var where = $(".pomme")[i];
+        console.log(where);
+        var emoNum=document.getElementsByClassName("pomme")[i].innerHTML;
+        switch(emoNum) {
+            case '1':
+                where.innerHTML='<img src="http://4.bp.blogspot.com/-ZgtYQpXq0Yo/UZEDl_PJLhI/AAAAAAAADnk/2pgkDG-nlGs/s1600/facebook-smiley-face-for-comments.png">';
+                break;
+            case '2':
+                where.innerHTML='<img src="http://3.bp.blogspot.com/-2xtlB3F7l4U/UZFOZ1FWvrI/AAAAAAAADoI/9P9JWS-ZIEI/s1600/facebook-cry-emoticon-crying-symbol.png">';
+                break;
+            case '3':
+                where.innerHTML='<img src="http://1.bp.blogspot.com/-MB8OSM9zcmM/TvitChHcRRI/AAAAAAAAAiE/kdA6RbnbzFU/s400/surprised%2Bemoticon.png">';
+                break;
+            case '4':
+                where.innerHTML='<img src="http://3.bp.blogspot.com/-wn2wPLAukW8/U1vy7Ol5aEI/AAAAAAAAGq0/f7C6-otIDY0/s1600/squinting-emoticon.png">';
+                break;
+            case '5':
+                where.innerHTML='<img src="http://3.bp.blogspot.com/-h2ErlFczszQ/TvirzZanEUI/AAAAAAAAAh4/rghgvQxSXmQ/s400/devil%2Bemoticon.png">';
+                break;
+            default:
+                where.innerHTML='<img src="http://3.bp.blogspot.com/-h2ErlFczszQ/TvirzZanEUI/AAAAAAAAAh4/rghgvQxSXmQ/s400/devil%2Bemoticon.png">';
+
+        }
+    }
+
+
+}
+
+
 function collapseIt(event){
     event.preventDefault();
     var $this = $(this);
     var $collapse = $this.closest('.collapse-group').find('.collapse');
 
-    console.log($this.closest('.emo').find('.pomme').val());
+    //console.log($this.closest('.emo').find('.pomme').innerHTML);
 
 
 
