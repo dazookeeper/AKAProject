@@ -29,6 +29,9 @@ function editReviewSubmit(event) {
     var where = $('#where').val();
     console.log(where);
 
+    var artisturl=$('#biggreen').val()+'-'+$('#biggray');
+    console.log(artisturl);
+
     var submit = review!=""||summary!=""||date!=""||where!="";
     if (submit) {
         var obj = 
@@ -42,7 +45,9 @@ function editReviewSubmit(event) {
     
         $.post("/editSubmitReview", obj, null);
         alert("Successfully made review changes! Refreshing the page now...");
-        location.reload();
+        var artistpage=window.location.href.split('/')[0];
+        window.location.href = '"'+artistpage+'/'+artisturl+'"';
+        //location.reload();
     };
     
 }

@@ -101,7 +101,7 @@ function changeValue() {
 
         data.Favorite2=fav2;
         console.log(data.Favorite2)
-    })
+    });
 
   //  console.log(jsonObject);
 
