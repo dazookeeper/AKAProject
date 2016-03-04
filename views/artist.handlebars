@@ -213,15 +213,19 @@
                   <a href="/editreview/{{reviewId}}" class="btn btn-warning btn-sm"></span>Edit Review</a>
                   <a href="/removereview" class="btn btn-danger btn-sm"></span>Delete Review</a>
                   <br>
-
+            <div class="row">
                 Date: <p id="reviewFont">{{date}}</p><br>
                 Where: <p id="reviewFont">{{where}}</p><br>
                 Rating: <p id="reviewFont">{{rating}}</p> out of 5<br>
-                Emoticon: <p id="reviewFont">{{emoticon}}</p><br>
-                <img class=".img-responsive .img-thumbnail" src="{{reviewImg}}" width="200px" height="200px"><br>
+                <div class="emo">Emoticon: <p id="reviewFont" class="pomme">{{emoticon}}</p><br></div>
+
+            </div>
+                <br>
                 <!-- Review Img: {{reviewImg}}<br> -->
                 <h4 id="reviewFont">{{review}}</h4>
                 <br>
+                <center><img class="img-thumbnail" src="{{reviewImg}}" width="150px" height="150px"></center>
+            
                 
               </div>
               <p><a class="btn btn-default potato">Toggle review &raquo;</a></p>
