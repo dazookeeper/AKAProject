@@ -1,215 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Music AKA | Life's an Entertainment</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content=""/>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/component.css" />
-<script src="js/modernizr.custom.js"></script>
-<link href="css/bootstrap-social.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
-
-<!--login form links -->
-
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="/css/login.css">
-
-<!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/login.js"></script>
-<script type="text/javascript" src="js/accounts.js"></script>
-<!-- javascript for login -->
-
-<!-- //js -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-	<!-- start-smoth-scrolling -->
-	<script src="js/hover_pack.js"></script>
+	<title>Music AKA | Life's an Entertainment</title>
+	{{> scripts}}
 </head>
+
 <body>
-<!-- banner -->
-<div class="banner">
-	<div class="col-md-10 banner-right">
-			
-		<!-- <div class="navigation">
-			<div class="nav-left">
-				<span class="menu"><img src="img/back.png" alt=""/></span>
-						
-						<ul class="nav1">
-							<li class="hvr-underline-from-left button2"><a class="active" href="/index">Home</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/about">About</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/artists">Artists</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/profile">Profile</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/shortcodes">Short Codes</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/contact">Contact</a></li>
-						</ul> -->
-						<!-- script for menu -->
-							<!--<script> 
-								$( "span.menu" ).click(function() {
-								$( "ul.nav1" ).slideToggle( 300, function() {
-								 // Animation complete.
-								});
-								});
-							</script> -->
-						<!-- //script for menu -->
-			<!-- </div>
-			</div>
+{{> nav}}
 
-			<div class="nav-right">
-				<ul>
-					<a href="#" class="btn btn-block btn-social btn-facebook">
-						<span class="fa fa-facebook"></span> Sign In
-					</a>
-				</ul>				
-			</div> -->
-			<div class="col-md-2 banner-left"> <!-- used to be 2 KYLE-->
-				<h1><a href="/index">MU<span>SIC</span> <i>AKA</i></a></h1>
+	<div id="wrapper">
+		<div class="banner">
+			<div class="col-md-10 banner-right">
+				<div class="col-md-2 banner-left">
+					<h1><a href="/index">MU<span>SIC</span> <i>AKA</i></a></h1>
+				</div>
+				<div class="clearfix"></div>
 			</div>
-			<div class="clearfix"></div>
-		</div>
-
 
 		<div class="banner-albums">
 			<div id="portfoliolist">
-							<div class="port-grid">
-								<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-										<div class="portfolio-wrapper">
-											<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
-												<img class="img-responsive lot" src="img/b1.jpg" alt="">
-												 <div class="b-wrapper">
-													<div class="b-animate b-from-left b-delay03 ">
-														 <p class="plus">Rock</p>
-														 <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
-														 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
-													</div>
-												</div>
-											</a>						
-										</div>
-								</div>				
-								<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
-										<div class="portfolio-wrapper">
-											<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
-												<img class="img-responsive lot" src="img/b2.jpg" alt="">
-												 <div class="b-wrapper">
-													<div class="b-animate b-from-left b-delay03 ">
-														 <p class="plus">African</p>
-														  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
-														 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
-													</div>
-												</div>
-											</a>						
-										</div>
-								</div>		
-							</div>	
-							<div class="port-grid">
-								<div class="portfolio mov mix_all" data-cat="mov" style="display: inline-block; opacity: 1;">
-										<div class="portfolio-wrapper">
-											<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go" >
-												<img class="img-responsive lot" src="img/b3.jpg" alt="">
-												 <div class="b-wrapper">
-													<div class="b-animate b-from-left b-delay03 ">
-														 <p class="plus">Hip Hop</p>
-														  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
-														 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
-													</div>
-												</div>
-											</a>						
-										</div>
-								</div>	
-								<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
-										<div class="portfolio-wrapper">
-											<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
-												<img class="img-responsive lot" src="img/b6.jpg" alt="">
-												 <div class="b-wrapper">
-													<div class="b-animate b-from-left b-delay03 ">
-														 <p class="plus">Folk</p>
-														  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
-														 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
-													</div>
-												</div>
-											</a>						
-										</div>
-								</div>			
-								
+				<div class="port-grid">
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
+							<img class="img-responsive lot" src="img/b1.jpg" alt="">
+							<div class="b-wrapper">
+								<div class="b-animate b-from-left b-delay03 ">
+									<p class="plus">Rock</p>
+									<div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
+									<div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
+								</div>
 							</div>
-							<div class="port-grid">
-								<div class="portfolio mov mix_all" data-cat="mov" style="display: inline-block; opacity: 1;">
-										<div class="portfolio-wrapper">
-											<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
-												<img class="img-responsive lot" src="img/b5.jpg" alt="">
-												 <div class="b-wrapper">
-													<div class="b-animate b-from-left b-delay03 ">
-														 <p class="plus">Indie</p>
-														  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
-														 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
-													</div>
-												</div>
-											</a>						
+						</a>						
+						</div>
+					</div>				
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">
+								<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
+									<img class="img-responsive lot" src="img/b2.jpg" alt="">
+									 <div class="b-wrapper">
+										<div class="b-animate b-from-left b-delay03 ">
+											 <p class="plus">African</p>
+											  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
+											 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
 										</div>
-								</div>
-								<div class="portfolio set mix_all" data-cat="set" style="display: inline-block; opacity: 1;">
-										<div class="portfolio-wrapper">
-											<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
-												<img class="img-responsive lot" src="img/b10.jpg" alt="">
-												 <div class="b-wrapper">
-													<div class="b-animate b-from-left b-delay03 ">
-														 <p class="plus">College</p>
-														  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
-														 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
-													</div>
-												</div>
-											</a>						
+									</div>
+								</a>						
+							</div>
+						</div>		
+					</div>	
+					<div class="port-grid">
+						<div class="portfolio mov mix_all" data-cat="mov" style="display: inline-block; opacity: 1;">
+								<div class="portfolio-wrapper">
+									<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go" >
+										<img class="img-responsive lot" src="img/b3.jpg" alt="">
+										 <div class="b-wrapper">
+											<div class="b-animate b-from-left b-delay03 ">
+												 <p class="plus">Hip Hop</p>
+												  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
+												 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
+											</div>
 										</div>
+									</a>						
 								</div>
 							</div>	
-							<div class="port-grid">
-								<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
-										<div class="portfolio-wrapper">
-											<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
-												<img class="img-responsive lot" src="img/b4.jpg" alt="">
-												 <div class="b-wrapper">
-													<div class="b-animate b-from-left b-delay03 ">
-														 <p class="plus">Punk</p>
-														  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
-														 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
-													</div>
-												</div>
-											</a>						
+						<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">
+								<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
+									<img class="img-responsive lot" src="img/b6.jpg" alt="">
+									 <div class="b-wrapper">
+										<div class="b-animate b-from-left b-delay03 ">
+											 <p class="plus">Folk</p>
+											  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
+											 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
 										</div>
+									</div>
+								</a>						
+							</div>
+						</div>					
+					</div>
+					<div class="port-grid">
+						<div class="portfolio mov mix_all" data-cat="mov" style="display: inline-block; opacity: 1;">
+								<div class="portfolio-wrapper">
+									<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
+										<img class="img-responsive lot" src="img/b5.jpg" alt="">
+										 <div class="b-wrapper">
+											<div class="b-animate b-from-left b-delay03 ">
+												 <p class="plus">Indie</p>
+												  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
+												 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
+											</div>
+										</div>
+									</a>						
+								</div>
+							</div>
+							<div class="portfolio set mix_all" data-cat="set" style="display: inline-block; opacity: 1;">
+									<div class="portfolio-wrapper">
+										<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
+											<img class="img-responsive lot" src="img/b10.jpg" alt="">
+											 <div class="b-wrapper">
+												<div class="b-animate b-from-left b-delay03 ">
+													 <p class="plus">College</p>
+													  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
+													 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
+												</div>
+											</div>
+										</a>						
+									</div>
+							</div>
+						</div>	
+						<div class="port-grid">
+							<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+									<div class="portfolio-wrapper">
+										<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
+											<img class="img-responsive lot" src="img/b4.jpg" alt="">
+											 <div class="b-wrapper">
+												<div class="b-animate b-from-left b-delay03 ">
+													 <p class="plus">Punk</p>
+													  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
+													 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
+												</div>
+											</div>
+										</a>						
+									</div>
 								</div>				
-								<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
-										<div class="portfolio-wrapper">
-											<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
-												<img class="img-responsive lot" src="img/b8.jpg" alt="">
-												 <div class="b-wrapper">
-													<div class="b-animate b-from-left b-delay03 ">
-														 <p class="plus">Art Punk</p>
-														  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
-														 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
-													</div>
+							<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+									<div class="portfolio-wrapper">
+										<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go">
+											<img class="img-responsive lot" src="img/b8.jpg" alt="">
+											 <div class="b-wrapper">
+												<div class="b-animate b-from-left b-delay03 ">
+													 <p class="plus">Art Punk</p>
+													  <div class="port-like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>3</div>
+													 <div class="port-heart"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>3</div>
 												</div>
-											</a>						
-										</div>
+											</div>
+										</a>						
+									</div>
 								</div>		
 							</div>
 							<div class="port-grid">
@@ -242,240 +169,44 @@
 										</div>
 								</div>		
 							</div>	
-							<div class="clearfix"></div>
-			</div>
-		</div>
-		<!-- banner-bottom -->
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			<!-- banner-bottom -->
 			<div class="banner-bottom text-center">
 			
-					<h3>HELLO THERE</h3>
-					<h4>Welcome to the world of music aka</h4>
+					<h3>Hello, there</h3>
 					<!-- LOGIN FORM -->
-<div class="text-center" style="padding:5px 0">
-	<!-- Main Form -->
-	<div class="login-form-1">
-		<form id="login-form" class="text-left">
-			<div class="login-form-main-message"></div>
-			<div class="main-login-form">
-				<div class="login-group">
-					<div class="form-group">
-						<label for="lg_username" class="sr-only">Username</label>
-						<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+		<div class="text-center" style="padding:5px 0">
+			<!-- Main Form -->
+			<div class="login-form-1">
+				<form id="login-form" class="text-left">
+					<div class="login-form-main-message"></div>
+					<div class="main-login-form">
+						<div class="login-group">
+							<div class="form-group">
+								<label for="lg_username" class="sr-only">Username</label>
+								<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+							</div>
+							<div class="form-group">
+								<label for="lg_password" class="sr-only">Password</label>
+								<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+							</div>
+							<!--<div class="form-group login-group-checkbox">
+								<input type="checkbox" id="lg_remember" name="lg_remember">
+								<label for="lg_remember">Remember me</label>
+							</div>-->
+						</div>
+						<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
 					</div>
-					<div class="form-group">
-						<label for="lg_password" class="sr-only">Password</label>
-						<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+					<div class="etc-login-form"><br>
+						<h2 style="color:white;">New user? <a href="/registration" style="color:white;"><u>Register here</u></a></h2>
+						<h2 style="color:white;">Forgot your password? <a href="/accountrecovery" style="color:white;"><u>Click here</u></a></h2>
 					</div>
-					<div class="form-group login-group-checkbox">
-						<input type="checkbox" id="lg_remember" name="lg_remember">
-						<label for="lg_remember">Remember me</label>
-					</div>
-				</div>
-				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+				</form>
 			</div>
-			<div class="etc-login-form">
-				<h4>forgot your password? <a href="/accountrecovery"><u>click here</u></a></h4>
-				<br>
-				<h4>new user? <a href="/registration"><u>create new account</u></a></h4>
-			</div>
-		</form>
+			<!-- end:Main Form -->
+		</div>			
 	</div>
-	<!-- end:Main Form -->
-</div>
-
-					
-			</div>
-
-		<!-- latest
-		<div class="latest">
-				<h3 class="tittle">FEEL THE MUSIC</h3>
-				<div class="tip-grids">
-					<div class="col-md-5 tip-grid">
-						<figure class="effect-julia">
-							<img src="img/99.jpg" alt="" />
-								<figcaption>
-									<h4>FEATURED MUSIC</h4>
-										<p>Featured Artist 1</p>
-										<p>Featured Artist 2</p>
-										<p>Featured Artist 3</p>
-								</figcaption>			
-						</figure>
-					</div>
-					<div class="col-md-7 tip-grid-right">
-						<div class="tip-gd-left">
-							<div class="micro-left">
-								<img src="img/11.png" alt="" />
-							</div>
-							<div class="micro-right">
-								<h4>Spotlight</h4>
-								<p> Zayn's 'Pillowtalk' Debuts at No. 1 on Hot 100. The former One Direction member launches on top with his first solo single. Plus, Drake debuts at No. 6 with "Summer Sixteen" and G-Eazy and Bebe Rexha reach the top 10 with "Me, Myself & I."
-								<a href="#">Find out more...</a></p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="tip-gd-left">
-							<div class="micro-left">
-								<img src="img/22.png" alt="" />
-							</div>
-							<div class="micro-right">
-								<h4>Coming Soon</h4>
-								<p> After destroying Winterfest at Park City Utah with his set, Skrillex sat down with Billboard to chat about Jack U, his collaborative project with Diplo, in the midst of Sundance 2015. According to Skrillex, Jack U will be releasing a "mini-album or EP" in a time frame that's "sooner than later." <a href="#">Find out more...</a></p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-
-		</div>
-
-		<div class="effect-grid">
-				<h3 class="tittle">UPCOMING EVENTS</h3>
-				<ul class="grid cs-style-3">
-				<li>
-					<figure>
-						<img src="img/g1.jpg" alt="img02">
-						<figcaption>
-							<h4>Experience 1</h4>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/g2.jpg" alt="img03">
-						<figcaption>
-							<h4>Experience 2</h4>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/g3.jpg" alt="img06">
-						<figcaption>
-							<h4>Experience 3</h4>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/g4.jpg" alt="img04">
-						<figcaption>
-							<h4>Experience 4</h4>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/g5.jpg" alt="img05">
-						<figcaption>
-							<h4>Experience 5</h4>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/g6.jpg" alt="img01">
-						<figcaption>
-							<h4>Experience 6</h4>
-						</figcaption>
-					</figure>
-				</li>
-			</ul>
-
-		</div>
-		
-		<div class="best-music text-center">
-				<h3 class="tittle">CONNECTION CORNER</h3>
-				<div class="servc-grids">
-					<div class="col-md-3 servc-grid">
-						<div class="servc-icon hi-icon-effect-8">
-							<a href="#" class="hi-icon hi-icon-archive"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span></a>
-						</div>
-						<h4>Your Profile</h4>
-						<p><i>Introduce yourself</i></p>
-					</div>
-					<div class="col-md-3 servc-grid">
-						<div class="servc-icon hi-icon-effect-8">
-							<a href="#" class="hi-icon hi-icon-archive"><span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span></a>
-						</div>
-						<h4>Your Community</h4>
-						<p><i>Meet others</i></p>
-					</div>
-					<div class="col-md-3 servc-grid">
-						<div class="servc-icon hi-icon-effect-8">
-							<a href="#" class="hi-icon hi-icon-archive"><span class="glyphicon glyphicon glyphicon-facetime-video" aria-hidden="true"></span></a>
-						</div>
-						<h4>Explore</h4>
-						<p><i>Discover something new</i></p>
-					</div>
-					<div class="col-md-3 servc-grid">
-						<div class="servc-icon hi-icon-effect-8">
-							<a href="#" class="hi-icon hi-icon-archive"><span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"></span></a>
-						</div>
-						<h4>Favorites</h4>
-						<p><i>Same old love</i></p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-		</div>
-		
-		<div class="footer">
-				<div class="col-md-3 footer-grid">
-					<h2><a href="/index">ARTISTS</a></h2>		
-				</div>
-				<div class="col-md-3 footer-grid">
-					<h2><a href="/index">EXPERIENCE</a></h2>
-				</div>
-				<div class="col-md-3 footer-grid">
-					<h2><a href="/index">PROFILE</a></h2>
-				</div>
-				<div class="clearfix"></div>
-		</div>
-	</div>
-	<div class="clearfix"></div>
-</div>-->
-
-<!--<nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-    <center>
-      <div class="dropup">      
-        <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" display="inline" float="left">
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <li><a href="/about">About</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="/">Sign out</a></li>
-        </ul>
-      </div>
-      <a href="/artists" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th"></span> Artists</a>
-      <a href="/profile" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
-      <a href="/review" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span></a>
-    </center>
-  </div>
-</nav>-->
-    {{>navbar0}}
-
-<!-- //banner -->
-<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
-
-<!-- //for bootstrap working -->
-<!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- //smooth scrolling -->
 </body>
 </html>

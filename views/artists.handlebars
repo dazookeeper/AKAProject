@@ -1,40 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Music AKA | Life's an Entertainment</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content=""/>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/component.css" />
-<link rel="stylesheet" type="text/css" href="css/slidejs.css" />
-<script src="js/modernizr.custom.js"></script>
-<link href="css/bootstrap-social.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
-
-<!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-	<!-- start-smoth-scrolling -->
-	<script src="js/hover_pack.js"></script>
+  <title>Music AKA | Life's an Entertainment</title>
+  {{> scripts}}
 </head>
 
 <script type="text/javascript">
@@ -77,6 +45,8 @@
 </script>
 
 <body>
+  {{> nav}}
+  <div id="me" class="panel">
   
   <center>
     <font id="biggreen">MUSIC</font> 
@@ -84,21 +54,16 @@
   </center>
   <br>
 
-  <div class="col-sm-3 col-md-3 pull-right">
     <form class="navbar-form" role="search" onsubmit="search(); return false">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+        <input type="text" class="form-control" placeholder="Enter name to search" name="srch-term" id="srch-term">
         <div class="input-group-btn">
-          <button class="btn btn-default" type="button" id="srch-btn" onclick="search()"><i class="glyphicon glyphicon-search"></i></button>
+          <button class="btn btn-default" type="button" id="srch-btn" onclick="search()"><i class="fa fa-search"></i></button>
         </div>
       </div>
     </form>
-  </div>
-  <!--onKeyDown="if(event.keyCode==13)-->
-
-	<div class="clearfix"></div>
-
-	<!-- SlidesJS Required: Start Slides -->
+  
+  <!-- SlidesJS Required: Start Slides -->
   <!-- The container is used to define the width of the slideshow -->
   <div class="container">
     <div id="artist_name_kw"><a href="/artist/kanye-west"><h3 id="tittle">Kanye West</h3></a>
@@ -122,16 +87,6 @@
       <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
     </div>
     </div>
-
-    <!-- <a href="/artist/rl-grime"><h3 id="tittle">RL Grime</h3></a>
-    <div id="slides">
-      <img src="img/rg0.jpg">
-      <img src="img/rg1.jpg">
-      <img src="img/rg2.jpg">
-      <img src="img/rg3.jpg">
-      <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
-      <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
-    </div> -->
 
     <div id="artist_name_ts"><a href="/artist/taylor-swift"><h3 id="tittle">Taylor Swift</h3></a>
     <div id="slides">
@@ -194,52 +149,8 @@
     });
   </script>
   <!-- End SlidesJS Required -->
-		
-	</div>
-	<div class="clearfix"></div>
-  <br>
-  <br>
-</div>
-
-<nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-    <center>
-      <div class="dropup">      
-        <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" display="inline" float="left">
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <li><a href="/about">About</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="/">Sign out</a></li>
-        </ul>
-      </div>
-      <a href="/artists" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-th"></span> Artists</a>
-      <a href="/profile" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
-      <a href="/review" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span></a>
-    </center>
+	
+  <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
   </div>
-</nav>
-
-<!-- //banner -->
-<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<!-- smooth scrolling
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>-->
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- //smooth scrolling -->
 </body>
 </html>

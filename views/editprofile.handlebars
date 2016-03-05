@@ -1,41 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Music AKA | Life's an Entertainment</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content=""/>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/component.css" />
-<script src="js/modernizr.custom.js"></script>
-<link href="css/bootstrap-social.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
-
-<!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/editProfile.js"></script>
-<!-- //js -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-	<!-- start-smoth-scrolling -->
-	<script src="js/hover_pack.js"></script>
+	<title>Music AKA | Life's an Entertainment</title>
+	{{> scripts}}
 </head>
 <body>
+{{> nav}}
 <!-- banner -->
 <div class="banner">
 	<div class="col-md-10 banner-right">
@@ -56,97 +26,20 @@
 
 
 					<form>
-						<h3>About Me</h3>
-                        <!--<input type="text" class="form-control" id="aboutme" placeholder="Maximum of 300 characters" name="aboutme">-->
-						<textarea placeholder="Maximum of 300 characters" required="" maxlength="300" id="aboutme" name="aboutme"></textarea>
+						<textarea placeholder="About Me" required="" maxlength="300" id="aboutme" name="aboutme"></textarea>
 		    		<br>
-		    			<h3>Favorites</h3>
-						<input type="text" placeholder="Favorite artist #1" required="" id="fav1">
+		    		<input type="text" placeholder="Favorite artist #1" required="" id="fav1">
 						<input type="text" placeholder="Favorite artist #2" required="" id="fav2">
 						<input type="text" placeholder="Favorite artist #3" required="" id="fav3">
-
-					<!-- <br>
-		    			<h3>Venues</h3>
-						<input type="text" placeholder="Venue #1" required="">
-						<input type="text" placeholder="Venue #2" required="">
-						<input type="text" placeholder="Venue #3" required=""> -->
-
-					<br>
-		    			<h3>Genres</h3>
-						<input type="text" placeholder="Genre #1" required="" id="gen1">
+					<br><br>
+		    		<input type="text" placeholder="Genre #1" required="" id="gen1">
 						<input type="text" placeholder="Genre #2" required="" id="gen2">
 						<input type="text" placeholder="Genre #3" required="" id="gen3">
-
-					<!-- <br>
-		    			<h3>Moods</h3>
-						<input type="text" placeholder="Mood #1" required="">
-						<input type="text" placeholder="Mood #2" required="">
-						<input type="text" placeholder="Mood #3" required="">
-						
-						
-						
-
-						<br>
-						<br> -->
-						<br>
+						<br><br>
 						<input type="submit" class="form-control" value="submit" id="submitprofile">
-						<br>
-						<br>
 						<br>
 					</form>
 				</div>
 		</div>
-		<!-- //contact -->
-
-
-<!--<nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-  	<center>
-			<div class="dropup">  		
-  			<button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" display="inline" float="left">
-			    <span class="glyphicon glyphicon-menu-hamburger"></span>
-			  </button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-			    <li><a href="/about">About</a></li>
-			    <li role="separator" class="divider"></li>
-			    <li><a href="/">Sign out</a></li>
-			  </ul>
-			</div>
-			<a href="/artists" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-th"></span> Artists</a>
-  		<a href="/profile" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-user"></span> Profile</a>
-			<a href="/review" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus"></span></a>
-  	</center>
-  </div>
-</nav>-->
-        {{>navbar1}}
-
-	</div>
-	<div class="clearfix"></div>
-</div>
-
-
-
-
-
-<!-- //banner -->
-<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- //smooth scrolling -->
 </body>
 </html>

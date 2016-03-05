@@ -1,92 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Music AKA | Life's an Entertainment</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content=""/>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/component.css" />
-<script src="js/modernizr.custom.js"></script>
-<link href="css/bootstrap-social.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
-
-
-
-<!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<!-- login form  -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-<script src="js/login.js"></script>
-<link rel="stylesheet" href="/css/login.css">
-
-<!-- //js -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-	<!-- start-smoth-scrolling -->
-	<script src="js/hover_pack.js"></script>
+	<title>Music AKA | Life's an Entertainment</title>
+	{{> scripts}}
 </head>
 <body>
+{{> nav}}
 <!-- banner -->
 <div class="banner">
 	<div class="col-md-10 banner-right">
-		<div class="navigation">
-			<div class="nav-left">
-				<a href="/"><span class="menu"><img src="img/back.png" alt=""/></span></a>
-			</div>
-		</div>
-		<!-- <div class="navigation">
-			<div class="nav-left">
-				<span class="menu"><img src="img/menu.png" alt=""/></span>
-						<ul class="nav1">
-							<li class="hvr-underline-from-left button2"><a href="/index">Home</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/about">About</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/artists">Artists</a></li>
-							<li class="hvr-underline-from-left button2"><a href="/shortcodes">Short Codes</a></li>
-							<li class="hvr-underline-from-left button2"><a class="active" href="/contact">Contact</a></li>
-						</ul> -->
-						<!-- script for menu -->
-							<!-- <script> 
-								$( "span.menu" ).click(function() {
-								$( "ul.nav1" ).slideToggle( 300, function() {
-								 // Animation complete.
-								});
-								});
-							</script> -->
-						<!-- //script for menu -->
-			<!-- </div> -->
+	<br>
 			<div class="col-md-2 banner-left">
 				<h1><a href="/index">REGISTER<span></span> <i><span>NOW</span></i></a></h1>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
-	<div class="clearfix"></div>
 </div>
 
 
 <!-- REGISTRATION FORM -->
 <div class="text-center" style="padding:50px 0">
-	<div class="logo">Create an Account</div>
 	<!-- Main Form -->
 	<div class="login-form-1">
+		<br>
 		<form id="register-form" class="text-left">
 			<div class="login-form-main-message"></div>
 			<div class="main-login-form">
@@ -129,36 +66,14 @@
 				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
 			</div>
 			<div class="etc-login-form">
-				<p>Already have an account?<br><a href="/"><u>Login here</u></a></p>
+				<br>
+				<br>
+
+				<p style="color:white;">Already have an account? <br><a href="/" style="color:white;"><u>Login here</u></a></p>
 			</div>
 		</form>
 	</div>
 	<!-- end:Main Form -->
 </div>
-
-
-
-
-
-
-<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- //smooth scrolling -->
 </body>
 </html>
