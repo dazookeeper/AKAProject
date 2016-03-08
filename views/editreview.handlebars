@@ -33,7 +33,6 @@
             "where"    : where,
             "reviewId"			: reviewId
         };
-
         $.post("/editSubmitReview", obj, null);
         alert("Successfully made review changes! Refreshing the page now...");
             window.location.href = window.location.href.split('/')[0]+'/artist/'+artistName.split(' ')[0]+'-'+artistName.split(' ')[1];

@@ -19,7 +19,7 @@ function initializePage() {
     // $('#submit').click(changeValue);
     //$.get("/editSubmit", insertReview);
     // where.html()
-    $('#submitprofile').click(editProfileSubmit);
+    $('#submitprofile').unbind().click(editProfileSubmit);
 }
 
 function editProfileSubmit(event) {

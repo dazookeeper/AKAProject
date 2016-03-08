@@ -11,7 +11,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-    $('#submitreview').click(submitReview);
+    $('#submitreview').unbind().click(submitReview);
     document.getElementById("file_input").onchange = function(){
         var files = document.getElementById("file_input").files;
         var file = files[0];
@@ -103,9 +103,15 @@ function submitReview(event) {
             "image"   : document.getElementById("review_url").value
         };
 
+        var res = who.split(" ");
+        var firstname = res[0];
+        var lastname = res[1];
+        var artisturl = firstname + "-" + lastname;
+
         $.post("/reviewSubmit", obj, null);
         alert("Review submitted Successfully! Redirecting to Music Review");
-        location.reload();
+        window.location.href = "artist/" + artisturl;
+        //location.reload();
     }
 
 }

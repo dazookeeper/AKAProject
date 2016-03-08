@@ -13,7 +13,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-    $('#submiteditreview').click(editReviewSubmit);
+    $('#submiteditreview').unbind().click(editReviewSubmit);
 }
 
 function editReviewSubmit(event) {
