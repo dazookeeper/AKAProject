@@ -106,7 +106,7 @@ function submitReview(event) {
         var res = who.split(" ");
         var firstname = res[0];
         var lastname = res[1];
-        var artisturl = firstname + "-" + lastname;
+        var artisturl = firstname.toLowerCase() + "-" + lastname.toLowerCase();
 
         $.post("/reviewSubmit", obj, null);
         alert("Review submitted Successfully! Redirecting to Music Review");
